@@ -6,7 +6,7 @@ public class ColorPattern : MonoBehaviour
 {
     public GameObject[] colorObj;
     public Material[] colorMat;
-    public bool canClick, clicked, right, oneTime, done;
+    public bool canClick, clicked, right, oneTime, done, chestOpen;
     public int controle;
     public float time, baseTime;
 
@@ -44,6 +44,8 @@ public class ColorPattern : MonoBehaviour
         {
             if (done == true)
             {
+
+                chestOpen = true;
                 colorMat[0].EnableKeyword("_EMISSION");
                 colorMat[1].EnableKeyword("_EMISSION");
                 colorMat[2].EnableKeyword("_EMISSION");
