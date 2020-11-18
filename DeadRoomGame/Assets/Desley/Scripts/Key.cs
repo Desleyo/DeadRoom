@@ -6,19 +6,20 @@ using Valve.VR.InteractionSystem;
 
 public class Key : MonoBehaviour
 {
-    public GameObject keyHole;
+    public GameObject key, keylessHole, keyhole;
     public float distance;
-    public bool unlocked;
 
     // Update is called once per frame
     void Update()
     {
-        distance = Vector3.Distance(gameObject.transform.position, keyHole.transform.position);
-        if(distance <= .3f && !unlocked)
+        distance = Vector3.Distance(gameObject.transform.position, keylessHole.transform.position);
+        if(distance <= .3f)
         {
             //play sound
-            unlocked = true;
-            keyHole.GetComponentInParent<CircularDrive>().maxAngle = 90f;        
+            keylessHole.SetActive(false);
+            keyhole.SetActive(true);
+            key.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }
