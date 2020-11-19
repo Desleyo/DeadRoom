@@ -18,11 +18,6 @@ public class Socket : MonoBehaviour
 
             item.transform.position = transform.position;
             item.transform.rotation = Quaternion.identity;
-
-        if(item.GetComponent<CollisionCheck>().collisionWithHand == true)
-        {
-            print("cock");
-        }
     }
 
     public void OnCollisionEnter(Collision collision)
