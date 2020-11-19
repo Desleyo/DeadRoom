@@ -27,11 +27,11 @@ public class Socket : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.GetComponent<Interactable>())
+        if (collision.gameObject.GetComponent<Interactable>() && item == null)
         {
             item = collision.gameObject;
             gameObject.GetComponent<MeshRenderer>().enabled = false;
-            //gameObject.GetComponent<Collider>().enabled = false;
+            gameObject.GetComponent<Collider>().enabled = false;
         }
     }
 }
