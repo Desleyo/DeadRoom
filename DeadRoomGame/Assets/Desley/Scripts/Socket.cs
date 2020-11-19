@@ -31,11 +31,11 @@ public class Socket : MonoBehaviour
         item.transform.rotation = Quaternion.identity;
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.GetComponent<Interactable>() && item == null)
+        if (other.gameObject.GetComponent<Interactable>() && item == null)
         {
-            item = collision.gameObject;
+            item = other.gameObject;
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<Collider>().enabled = false;
         }
