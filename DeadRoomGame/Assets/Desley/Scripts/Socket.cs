@@ -8,27 +8,27 @@ using Valve.VR.InteractionSystem;
 public class Socket : MonoBehaviour
 {
     public GameObject item = null;
-    public SteamVR_Action_Boolean input;
-
-    public bool once;
+    public SteamVR_Action_Boolean grab;
+    public bool grabbing;
 
     // Update is called once per frame
     void Update()
     {
+        grabbing = grab.state;
+
         if (item == null)
             return;
-        
-        if (!once)
+
+        if(item.GetComponent<HandCollision>().collisionWithHand == true && grabbing)
         {
-            item.transform.position = transform.position;
-            item.transform.rotation = Quaternion.identity;
-            once = true;
+            item = null;
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+            gameObject.GetComponent<Collider>().enabled = true;
+            return;
         }
 
-        if(item.GetComponent<HandCollision>().collisionWithHand == true)
-        {
-
-        }
+        item.transform.position = transform.position;
+        item.transform.rotation = Quaternion.identity;
     }
 
     public void OnCollisionEnter(Collision collision)
