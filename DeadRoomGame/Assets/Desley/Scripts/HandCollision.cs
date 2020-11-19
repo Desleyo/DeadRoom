@@ -20,4 +20,15 @@ public class HandCollision : MonoBehaviour
             collisionWithHand = true;
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == rightHand)
+        {
+            collisionWithHand = false;
+        }
+        else if (other.gameObject == leftHand)
+        {
+            collisionWithHand = false;
+        }
+    }
 }

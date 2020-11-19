@@ -17,7 +17,9 @@ public class Socket : MonoBehaviour
         grabbing = grab.state;
 
         if (item == null)
+        {
             return;
+        }
 
         if(item.GetComponent<HandCollision>().collisionWithHand == true && grabbing)
         {
