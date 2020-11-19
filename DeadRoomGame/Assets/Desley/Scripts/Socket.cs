@@ -8,13 +8,20 @@ using Valve.VR.InteractionSystem;
 public class Socket : MonoBehaviour
 {
     public GameObject item = null;
+    public SteamVR_Action_Boolean input;
 
     // Update is called once per frame
     void Update()
     {
-        if(item != null)
-        {
+        if (item == null)
+            return;
+
             item.transform.position = transform.position;
+            item.transform.rotation = Quaternion.identity;
+
+        if(item.GetComponent<CollisionCheck>().collisionWithHand == true)
+        {
+            print("cock");
         }
     }
 
@@ -24,6 +31,7 @@ public class Socket : MonoBehaviour
         {
             item = collision.gameObject;
             gameObject.GetComponent<MeshRenderer>().enabled = false;
+            //gameObject.GetComponent<Collider>().enabled = false;
         }
     }
 }
