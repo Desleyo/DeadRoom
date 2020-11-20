@@ -24,11 +24,11 @@ public class SceneManeger : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene("Gerran");
+        SceneManager.LoadScene("Main Scene");
     }
 
     public void MenuScene()
     {
-        SceneManager.LoadScene("MainMenuTest");
+        SceneManager.LoadScene("Main Menu");
     }
 }

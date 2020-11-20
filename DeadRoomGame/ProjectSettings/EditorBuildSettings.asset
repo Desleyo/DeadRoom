@@ -8,12 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/UnityZooi/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
+  - enabled: 0
     path: Assets/Gerran/MainMenuTest.unity
     guid: 04f4664b714fabb4096e8b5d80acdf51
-  - enabled: 1
+  - enabled: 0
     path: Assets/Gerran/Gerran.unity
     guid: 9ec1fe8a12ede2745895450a679bb00e
+  - enabled: 1
+    path: Assets/Main scene/Main Scene.unity
+    guid: feeccbc7ace1fb34796cb8c71e978be4
+  - enabled: 1
+    path: Assets/Main scene/Main Menu.unity
+    guid: a17e33d73fee55d43b2be007cd773e68
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3f9bc0737b35afe4e883082511a3cd12,
       type: 2}
