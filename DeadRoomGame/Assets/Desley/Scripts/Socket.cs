@@ -41,7 +41,7 @@ public class Socket : MonoBehaviour
         if(item.GetComponent<HandCollision>().collisionWithHand == true && grabbing)
         {
             item.transform.position = closestHand.transform.position;
-            item = null; 
+            item = null;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
             gameObject.GetComponent<SphereCollider>().enabled = true;
             return;

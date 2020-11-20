@@ -1216,6 +1216,12 @@ MonoBehaviour:
   grab:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
+  hands:
+  - {fileID: 370032510}
+  - {fileID: 80497099}
+  distance: Infinity
+  closestDistance: Infinity
+  timer: 0
   grabbing: 0
 --- !u!1 &336348029
 GameObject:
@@ -1925,6 +1931,12 @@ MonoBehaviour:
   grab:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
+  hands:
+  - {fileID: 370032510}
+  - {fileID: 80497099}
+  distance: Infinity
+  closestDistance: Infinity
+  timer: 0
   grabbing: 0
 --- !u!1 &642319724
 GameObject:
