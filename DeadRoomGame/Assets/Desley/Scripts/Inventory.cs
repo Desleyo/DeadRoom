@@ -8,39 +8,23 @@ using Valve.VR.InteractionSystem;
 public class Inventory : MonoBehaviour
 {
     public GameObject item = null;
-    public SteamVR_Action_Boolean grab;
-    public GameObject[] hands;
-    GameObject closestHand = null;
-    public float distance = Mathf.Infinity, closestDistance = Mathf.Infinity;
-    public bool grabbing;
+    public SteamVR_Action_Boolean detach;
+    public GameObject hand;
+    public bool detaching;
 
     // Update is called once per frame
     void Update()
     {
-        grabbing = grab.state;
+        detaching = detach.state;
 
         if (item == null)
         {
             return;
         }
 
-        distance = Mathf.Infinity;
-        closestDistance = Mathf.Infinity;
-        closestHand = null;
-
-        foreach (GameObject hand in hands)
+        if(detaching)
         {
-            distance = Vector3.Distance(hand.transform.position, item.transform.position);
-            if(distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestHand = hand;
-            }
-        }
-
-        if(item.GetComponent<HandCollision>().collisionWithHand == true && grabbing)
-        {
-            item.transform.position = closestHand.transform.position;
+            item.transform.position = hand.transform.position;
             item = null; 
             gameObject.GetComponent<MeshRenderer>().enabled = true;
             gameObject.GetComponent<SphereCollider>().enabled = true;
