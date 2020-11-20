@@ -9,6 +9,9 @@ public class Socket : MonoBehaviour
 {
     public GameObject item = null;
     public SteamVR_Action_Boolean grab;
+    public GameObject[] hands;
+    GameObject closestHand = null;
+    public float distance = Mathf.Infinity, closestDistance = Mathf.Infinity;
     public bool grabbing;
 
     // Update is called once per frame
@@ -21,9 +24,24 @@ public class Socket : MonoBehaviour
             return;
         }
 
+        distance = Mathf.Infinity;
+        closestDistance = Mathf.Infinity;
+        closestHand = null;
+
+        foreach (GameObject hand in hands)
+        {
+            distance = Vector3.Distance(hand.transform.position, item.transform.position);
+            if(distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestHand = hand;
+            }
+        }
+
         if(item.GetComponent<HandCollision>().collisionWithHand == true && grabbing)
         {
-            item = null;
+            item.transform.position = closestHand.transform.position;
+            item = null; 
             gameObject.GetComponent<MeshRenderer>().enabled = true;
             gameObject.GetComponent<SphereCollider>().enabled = true;
             return;
