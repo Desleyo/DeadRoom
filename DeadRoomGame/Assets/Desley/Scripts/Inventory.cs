@@ -8,6 +8,7 @@ using Valve.VR.InteractionSystem;
 public class Inventory : MonoBehaviour
 {
     public GameObject item = null;
+    public Rigidbody itemRigidbody = null;
     public SteamVR_Action_Boolean detach;
     public GameObject hand;
     public bool detaching;
@@ -25,7 +26,11 @@ public class Inventory : MonoBehaviour
         if(detaching)
         {
             item.transform.position = hand.transform.position;
-            item = null; 
+            item.GetComponent<AfterPickup>().timer = 1f;
+            itemRigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            item.GetComponent<Collider>().enabled = true;
+            item = null;
+            itemRigidbody = null;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
             gameObject.GetComponent<SphereCollider>().enabled = true;
             return;
@@ -40,6 +45,8 @@ public class Inventory : MonoBehaviour
         if (other.gameObject.GetComponent<Interactable>() && item == null)
         {
             item = other.gameObject;
+            itemRigidbody = item.GetComponent<Rigidbody>();
+            item.GetComponent<Collider>().enabled = false;
             gameObject.GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<SphereCollider>().enabled = false;
         }
