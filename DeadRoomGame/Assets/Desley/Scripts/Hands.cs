@@ -48,7 +48,7 @@ public class Hands : MonoBehaviour
 
     private bool NearestInteraction()
     {
-        contactInteractables.Remove(socket.GetStoredObject().GetComponent<Interactable>());
+        contactInteractables.Remove(socket.GetStoredObject());
         Interactable nearestObject = Utility.GetNearestInteractable(transform.position, contactInteractables);
 
         if (nearestObject)

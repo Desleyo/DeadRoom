@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Socket : MonoBehaviour
 {
-    private Moveable storedObject = null;
+    private Interactable storedObject = null;
     private FixedJoint joint = null;
 
     private void Awake()
@@ -12,7 +12,7 @@ public class Socket : MonoBehaviour
         joint = GetComponent<FixedJoint>();
     }
 
-    private void Attach(Moveable newObject)
+    private void Attach(Interactable newObject)
     {
         if (storedObject)
             return;
@@ -35,7 +35,7 @@ public class Socket : MonoBehaviour
         storedObject = null;
     }
 
-    public Moveable GetStoredObject()
+    public Interactable GetStoredObject()
     {
         return storedObject;
     }
