@@ -1,63 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Valve.VR;
-using Valve.VR.InteractionSystem;
-
 
 public class Socket : MonoBehaviour
 {
-    public GameObject item = null;
-    public SteamVR_Action_Boolean grab;
-    public GameObject[] hands;
-    GameObject closestHand = null;
-    public float distance = Mathf.Infinity, closestDistance = Mathf.Infinity;
-    public bool grabbing;
+    private Moveable storedObject = null;
+    private FixedJoint joint = null;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        grabbing = grab.state;
-
-        if (item == null)
-        {
-            return;
-        }
-
-        distance = Mathf.Infinity;
-        closestDistance = Mathf.Infinity;
-        closestHand = null;
-
-        foreach (GameObject hand in hands)
-        {
-            distance = Vector3.Distance(hand.transform.position, item.transform.position);
-            if(distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestHand = hand;
-            }
-        }
-
-        if(item.GetComponent<HandCollision>().collisionWithHand == true && grabbing)
-        {
-            item.transform.position = closestHand.transform.position;
-            item = null;
-            gameObject.GetComponent<MeshRenderer>().enabled = true;
-            gameObject.GetComponent<SphereCollider>().enabled = true;
-            return;
-        }
-
-        item.transform.position = transform.position;
-        item.transform.rotation = Quaternion.identity;
+        joint = GetComponent<FixedJoint>();
     }
 
-    public void OnTriggerEnter(Collider other)
+    private void Attach(Moveable newObject)
     {
-        if (other.gameObject.GetComponent<Interactable>() && item == null)
-        {
-            item = other.gameObject;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
-            gameObject.GetComponent<SphereCollider>().enabled = false;
-        }
+        if (storedObject)
+            return;
+
+        storedObject = newObject;
+
+        storedObject.transform.position = transform.position;
+        storedObject.transform.rotation = Quaternion.identity;
+
+        Rigidbody targetBody = storedObject.GetComponent<Rigidbody>();
+        joint.connectedBody = targetBody;
+    }
+
+    private void Detach()
+    {
+        if (!storedObject)
+            return;
+
+        joint.connectedBody = null;
+        storedObject = null;
+    }
+
+    public Moveable GetStoredObject()
+    {
+        return storedObject;
     }
 }
