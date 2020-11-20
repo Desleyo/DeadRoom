@@ -25,7 +25,7 @@ public class Socket : MonoBehaviour
         {
             item = null;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
-            gameObject.GetComponent<Collider>().enabled = true;
+            gameObject.GetComponent<SphereCollider>().enabled = true;
             return;
         }
 
@@ -39,7 +39,7 @@ public class Socket : MonoBehaviour
         {
             item = other.gameObject;
             gameObject.GetComponent<MeshRenderer>().enabled = false;
-            gameObject.GetComponent<Collider>().enabled = false;
+            gameObject.GetComponent<SphereCollider>().enabled = false;
         }
     }
 }
