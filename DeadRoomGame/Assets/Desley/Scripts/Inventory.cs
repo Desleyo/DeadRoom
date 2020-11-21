@@ -37,7 +37,8 @@ public class Inventory : MonoBehaviour
         }
 
         item.transform.position = transform.position;
-        item.transform.rotation = Quaternion.identity;
+        item.transform.rotation = transform.rotation;
+       
     }
 
     public void OnTriggerEnter(Collider other)
