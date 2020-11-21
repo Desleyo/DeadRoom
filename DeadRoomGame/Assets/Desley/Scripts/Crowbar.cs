@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class Crowbar : MonoBehaviour
 {
-    public GameObject key, keyhole;
+    public GameObject crowbar, door;
     public float distance;
 
     // Update is called once per frame
     void Update()
     {
-        distance = Vector3.Distance(transform.position, keyhole.transform.position);
-        if(distance <= .3f)
+        distance = Vector3.Distance(transform.position, door.transform.position);
+        if(distance <= 1f)
         {
             //play sound
-            key.SetActive(true);
+            crowbar.SetActive(true);
             Destroy(gameObject);
         }
     }
