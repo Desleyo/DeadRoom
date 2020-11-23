@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: abea8ac683dd68944be2d7e0619141f4
+guid: 281aee83e8cb01345b4b4d502700aefe
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Stump
-    second: {fileID: 2100000, guid: fb1351753cd000c468d0ff4a3176b77a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tree
-    second: {fileID: 2100000, guid: 1c2c9eefd5419d645b02200dd1383bfd, type: 2}
+      name: No Name
+    second: {fileID: 2100000, guid: 26578b1aa5d53e541bca4d264a4ad6a2, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

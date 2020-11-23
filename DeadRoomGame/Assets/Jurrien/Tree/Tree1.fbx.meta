@@ -8,12 +8,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Stump
-    second: {fileID: 2100000, guid: af8b6c8e7de0b4f4285540a3ebc50db4, type: 2}
+    second: {fileID: 2100000, guid: fb1351753cd000c468d0ff4a3176b77a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: tree
-    second: {fileID: 2100000, guid: bb0d461033bbbaa439665a0f2cae3164, type: 2}
+    second: {fileID: 2100000, guid: 1c2c9eefd5419d645b02200dd1383bfd, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
