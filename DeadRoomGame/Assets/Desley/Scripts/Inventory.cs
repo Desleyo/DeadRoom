@@ -26,9 +26,9 @@ public class Inventory : MonoBehaviour
         if(detaching)
         {
             item.transform.position = hand.transform.position;
-            item.GetComponent<AfterPickup>().timer = 1f;
             itemRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             item.GetComponent<Collider>().enabled = true;
+            item.GetComponent<AfterPickup>().timer = 1f;
             item = null;
             itemRigidbody = null;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
