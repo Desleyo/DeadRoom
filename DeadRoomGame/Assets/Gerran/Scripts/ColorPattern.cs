@@ -38,6 +38,11 @@ public class ColorPattern : MonoBehaviour
             }
         }
 
+        if(canClick == false && closestDistance <= .5f)
+        {
+            canClick = true;
+        }
+
         if (canClick == true)
         {
             if(currentInput && closestDistance <= .5f)
