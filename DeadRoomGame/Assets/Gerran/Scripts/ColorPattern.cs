@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class ColorPattern : MonoBehaviour
 {
@@ -9,6 +11,11 @@ public class ColorPattern : MonoBehaviour
     public bool canClick, clicked, right, oneTime, done, chestOpen;
     public int controle;
     public float time, baseTime;
+
+    public SteamVR_Action_Boolean input;
+    public GameObject controller, closestColor;
+    public float distance, closestDistance = Mathf.Infinity;
+    public bool currentInput;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +26,18 @@ public class ColorPattern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentInput = input.state;
+        closestDistance = Mathf.Infinity;
+        foreach(GameObject color in colorObj)
+        {
+            distance = Vector3.Distance(controller.transform.position, color.transform.position);
+            if(distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestColor = color;
+            }
+        }
+
         if (canClick == true)
         {
             if(Input.GetButtonDown("Fire1"))
