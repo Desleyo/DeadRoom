@@ -26,17 +26,17 @@ public class ColorPattern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentInput = input.state;
-        closestDistance = Mathf.Infinity;
-        foreach(GameObject color in colorObj)
-        {
-            distance = Vector3.Distance(controller.transform.position, color.transform.position);
-            if(distance < closestDistance)
-            {
-                closestDistance = distance;
-                closestColor = color;
-            }
-        }
+        //currentInput = input.state;
+        //closestDistance = Mathf.Infinity;
+        //foreach(GameObject color in colorObj)
+        //{
+        //    distance = Vector3.Distance(controller.transform.position, color.transform.position);
+        //    if(distance < closestDistance)
+        //    {
+        //        closestDistance = distance;
+        //        closestColor = color;
+        //    }
+        //}
 
         if (canClick == true)
         {
@@ -63,13 +63,25 @@ public class ColorPattern : MonoBehaviour
         {
             if (done == true)
             {
+                if (time >= 0)
+                {
+                    time -= Time.deltaTime;
+                    chestOpen = true;
+                    colorMat[0].EnableKeyword("_EMISSION");
+                    colorMat[1].EnableKeyword("_EMISSION");
+                    colorMat[2].EnableKeyword("_EMISSION");
+                    colorMat[3].EnableKeyword("_EMISSION");
+                    colorMat[4].EnableKeyword("_EMISSION");
+                }
 
-                chestOpen = true;
-                colorMat[0].EnableKeyword("_EMISSION");
-                colorMat[1].EnableKeyword("_EMISSION");
-                colorMat[2].EnableKeyword("_EMISSION");
-                colorMat[3].EnableKeyword("_EMISSION");
-                colorMat[4].EnableKeyword("_EMISSION");
+                else if (time <= 0.00001)
+                {
+                    colorMat[0].DisableKeyword("_EMISSION");
+                    colorMat[1].DisableKeyword("_EMISSION");
+                    colorMat[2].DisableKeyword("_EMISSION");
+                    colorMat[3].DisableKeyword("_EMISSION");
+                    colorMat[4].DisableKeyword("_EMISSION");
+                }
 
             }
 
