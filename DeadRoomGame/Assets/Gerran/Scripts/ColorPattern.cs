@@ -40,7 +40,7 @@ public class ColorPattern : MonoBehaviour
 
         if (canClick == true)
         {
-            if(currentInput && distance <= .5f)
+            if(currentInput && closestDistance <= .5f)
             {
                 if (closestColor.tag == "Color1")
                 {
