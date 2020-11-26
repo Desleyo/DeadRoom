@@ -25,6 +25,7 @@ public class DoorOpen : MonoBehaviour
     {
         GetComponentInParent<CircularDrive>().minAngle = -90f;
         crowbar.GetComponentInChildren<Rigidbody>().useGravity = true;
+        crowbar.GetComponentInChildren<Collider>().isTrigger = false;
         timer = 1;
         doorBroken = true;
     }
