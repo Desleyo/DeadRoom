@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -1310,8 +1310,8 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
-  highlightOnHover: 1
+  handFollowTransform: 0
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!1 &426401529 stripped
@@ -2255,7 +2255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -2289,8 +2289,8 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
-  highlightOnHover: 1
+  handFollowTransform: 0
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!65 &1012608360
@@ -3440,7 +3440,7 @@ MonoBehaviour:
   input:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
-  controller: {fileID: 0}
+  controller: {fileID: 1626340542}
   closestColor: {fileID: 0}
   distance: 0
   closestDistance: Infinity
@@ -3897,7 +3897,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -3931,8 +3931,8 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
-  highlightOnHover: 1
+  handFollowTransform: 0
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!65 &1651399513
@@ -4060,7 +4060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateActionSetOnAttach:
     actionSetPath: 
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
@@ -4094,8 +4094,8 @@ MonoBehaviour:
   snapAttachEaseInTime: 0.15
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
-  handFollowTransform: 1
-  highlightOnHover: 1
+  handFollowTransform: 0
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!65 &1732353110
