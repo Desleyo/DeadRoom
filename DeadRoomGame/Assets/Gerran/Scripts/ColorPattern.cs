@@ -26,22 +26,50 @@ public class ColorPattern : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //currentInput = input.state;
-        //closestDistance = Mathf.Infinity;
-        //foreach(GameObject color in colorObj)
-        //{
-        //    distance = Vector3.Distance(controller.transform.position, color.transform.position);
-        //    if(distance < closestDistance)
-        //    {
-        //        closestDistance = distance;
-        //        closestColor = color;
-        //    }
-        //}
+        currentInput = input.state;
+        closestDistance = Mathf.Infinity;
+        foreach (GameObject color in colorObj)
+        {
+            distance = Vector3.Distance(controller.transform.position, color.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestColor = color;
+            }
+        }
 
         if (canClick == true)
         {
-            if(Input.GetButtonDown("Fire1"))
+            if(currentInput && distance <= .5f)
             {
+                if (closestColor.tag == "Color1")
+                {
+                    if (controle == 0)
+                    {
+                        right = true;
+                    }
+                }
+                else if(closestColor.tag == "Color2")
+                {
+                    if (controle == 1)
+                    {
+                        right = true;
+                    }
+                }
+                else if (closestColor.tag == "Color3")
+                {
+                    if (controle == 2)
+                    {
+                        right = true;
+                    }
+                }
+                else if (closestColor.tag == "Color4")
+                {
+                    if (controle == 3)
+                    {
+                        right = true;
+                    }
+                }
                 clicked = true;
                 oneTime = true;
                 canClick = false;
