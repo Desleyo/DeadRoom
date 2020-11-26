@@ -38,14 +38,14 @@ public class ColorPattern : MonoBehaviour
             }
         }
 
-        if(canClick == false && closestDistance <= .5f)
+        if(canClick == false && closestDistance <= 1)
         {
             canClick = true;
         }
 
         if (canClick == true)
         {
-            if(currentInput && closestDistance <= .5f)
+            if(currentInput && closestDistance <= 1)
             {
                 if (closestColor.tag == "Color1")
                 {
