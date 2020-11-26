@@ -95,6 +95,7 @@ public class ColorPattern : MonoBehaviour
                 {
                     time -= Time.deltaTime;
                     chestOpen = true;
+                    Debug.Log("clear");
                     colorMat[0].EnableKeyword("_EMISSION");
                     colorMat[1].EnableKeyword("_EMISSION");
                     colorMat[2].EnableKeyword("_EMISSION");
