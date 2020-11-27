@@ -6,7 +6,7 @@ public class OnMouseOver : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.tag == "Hand")
         {
             GetComponent<Outline>().OutlineWidth = 10;
         }
@@ -14,7 +14,7 @@ public class OnMouseOver : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.transform.tag == "Player")
+        if (collision.transform.tag == "Hand")
         {
             GetComponent<Outline>().OutlineWidth = 0;
         }
