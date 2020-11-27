@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class OnMouseOver : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.tag == "Hand")
+        if (other.transform.tag == "Hand")
         {
             GetComponent<Outline>().OutlineWidth = 10;
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.transform.tag == "Hand")
+        if (other.transform.tag == "Hand")
         {
             GetComponent<Outline>().OutlineWidth = 0;
         }
