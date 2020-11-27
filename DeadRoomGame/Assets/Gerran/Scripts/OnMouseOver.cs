@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class OnMouseOver : MonoBehaviour
 {
-    private void OnMouseEnter()
+    private void OnCollisionEnter(Collision collision)
     {
         GetComponent<Outline>().OutlineWidth = 10;
     }
 
-    private void OnMouseExit()
+    private void OnCollisionExit(Collision collision)
     {
         GetComponent<Outline>().OutlineWidth = 0;
     }
