@@ -43,7 +43,7 @@ public class Inventory : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Interactable>() && item == null && other.gameObject.tag != "Letter")
+        if (other.gameObject.GetComponent<Interactable>() && item == null && other.gameObject.layer == 9)
         {
             item = other.gameObject;
             itemRigidbody = item.GetComponent<Rigidbody>();

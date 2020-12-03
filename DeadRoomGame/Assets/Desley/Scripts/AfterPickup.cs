@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class AfterPickup : MonoBehaviour
 {
-    Rigidbody ItemRigidbody;
+    Rigidbody itemRigidbody;
     public float timer = Mathf.Infinity;
 
     // Start is called before the first frame update
     void Start()
     {
-        ItemRigidbody = GetComponent<Rigidbody>();
+        itemRigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class AfterPickup : MonoBehaviour
 
         if(timer <= 0)
         {
-            ItemRigidbody.constraints = RigidbodyConstraints.None;
+            itemRigidbody.constraints = RigidbodyConstraints.None;
             timer = Mathf.Infinity;
         }
     }

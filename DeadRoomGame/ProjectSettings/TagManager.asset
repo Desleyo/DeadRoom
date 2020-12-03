@@ -9,7 +9,6 @@ TagManager:
   - Color3
   - Color4
   - Hand
-  - Letter
   layers:
   - Default
   - TransparentFX

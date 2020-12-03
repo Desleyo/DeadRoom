@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class StairScratch : MonoBehaviour
 {
+    public GameObject player;
     public GameObject[] children;
-    public GameObject activeChild, player;
+    public GameObject activeChild;
     public bool hasAnimationToPlay;
     public int randomizer;
     public float timer, actionTime;
@@ -20,22 +21,28 @@ public class StairScratch : MonoBehaviour
         randomizer = Random.Range(0, children.Length);
         if (hasAnimationToPlay)
         {
-            StartEvent();
+            StartScratch();
         }
         else
         {
-            player.GetComponent<AudioSource>().Play();
-            children[randomizer].SetActive(true);
-            activeChild = children[randomizer];
-            timer = actionTime;
+            StartStair();
         }
     }
 
-    public void StartEvent()
+    public void StartScratch()
     {
+        player.GetComponent<Heartbeat>().startSearching = true;
+        children[randomizer].GetComponent<Animator>().SetBool("Scratch", true);
         children[randomizer].SetActive(true);
         activeChild = children[randomizer];
-        children[randomizer].GetComponent<Animator>().SetBool("Scratch", true);
+        timer = actionTime;
+    }
+
+    public void StartStair()
+    {
+        player.GetComponent<Heartbeat>().startSearching = true;
+        children[randomizer].SetActive(true);
+        activeChild = children[randomizer];
         timer = actionTime;
     }
 
@@ -44,12 +51,14 @@ public class StairScratch : MonoBehaviour
         timer -= Time.deltaTime;
         if(timer <= 0 && !hasAnimationToPlay)
         {
+            player.GetComponent<Heartbeat>().startSearching = false;
             activeChild.SetActive(false);
             activeChild = null;
             timer = Mathf.Infinity;
         }
         else if(timer <= 0)
         {
+            player.GetComponent<Heartbeat>().startSearching = false;
             activeChild.SetActive(false);
             activeChild.GetComponent<Animator>().SetBool("Scratch", false);
             activeChild = null;
