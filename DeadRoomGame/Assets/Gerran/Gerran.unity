@@ -4366,7 +4366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input:
-    actionPath: 
+    actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
   currentInput: 0
   distance: 0
