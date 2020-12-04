@@ -13,17 +13,18 @@ public class DoorOpen : MonoBehaviour
 
     public float timer = Mathf.Infinity;
     public bool doorBroken;
+    public int angle;
 
     public void DoorRotationKey()
     {
-        GetComponentInParent<CircularDrive>().maxAngle = 90f;
+        GetComponentInParent<CircularDrive>().minAngle = angle;
             key.transform.SetParent(transform);
             key.GetComponent<Collider>().enabled = false;
     }
 
     public void DoorRotationCrowbar()
     {
-        GetComponentInParent<CircularDrive>().minAngle = -90f;
+        GetComponentInParent<CircularDrive>().minAngle = angle;
         crowbar.GetComponentInChildren<Collider>().isTrigger = false;
         crowbar.GetComponentInChildren<Rigidbody>().useGravity = true;
         timer = 1;
