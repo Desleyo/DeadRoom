@@ -13,7 +13,7 @@ public class ColorPattern : MonoBehaviour
     public float time, baseTime;
 
     public SteamVR_Action_Boolean input;
-    public GameObject controller, closestColor, collerPattern;
+    public GameObject controller, closestColor, collerPattern, chest;
     public float distance, closestDistance = Mathf.Infinity;
     public bool currentInput;
 
@@ -115,6 +115,7 @@ public class ColorPattern : MonoBehaviour
                     colorMat[3].DisableKeyword("_EMISSION");
                     colorMat[4].DisableKeyword("_EMISSION");
                     collerPattern.SetActive(false);
+                    chest.GetComponent<CircularDrive>().minAngle = -50;
                 }
 
             }
