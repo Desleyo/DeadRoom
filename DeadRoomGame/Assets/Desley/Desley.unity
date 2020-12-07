@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4238,7 +4238,7 @@ MonoBehaviour:
   snapAttachEaseInCompleted: 0
   skeletonPoser: {fileID: 0}
   handFollowTransform: 0
-  highlightOnHover: 1
+  highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
 --- !u!4 &707650715
@@ -12036,8 +12036,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.028379126, y: 0.117016554, z: 0.50000477}
-  m_Center: {x: 5.878112e-10, y: -0.018420584, z: -0.0013823956}
+  m_Size: {x: 0.028379126, y: 0.117016554, z: 0.30761957}
+  m_Center: {x: 5.980655e-10, y: -0.018420583, z: -0.097574875}
 --- !u!54 &1726744825
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13528,7 +13528,7 @@ MonoBehaviour:
   crowbar: {fileID: 707650712}
   timer: 0
   doorBroken: 0
-  angle: 0
+  angle: -90
 --- !u!1001 &2023066080
 PrefabInstance:
   m_ObjectHideFlags: 0
