@@ -11,7 +11,7 @@ public class Crowbar : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, door.transform.position);
-        if(distance <= 1f)
+        if(distance <= .5f)
         {
             //play sound
             crowbar.SetActive(true);
