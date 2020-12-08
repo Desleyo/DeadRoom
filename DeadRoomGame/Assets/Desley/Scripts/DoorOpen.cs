@@ -10,11 +10,12 @@ public class DoorOpen : MonoBehaviour
     public GameObject key;
     [Header("not required when using key on door")]
     public GameObject crowbar;
+    [Header("not required when using key on door")]
+    public GameObject bedroomTP;
 
     public float timer = Mathf.Infinity;
     public bool doorBroken;
     public int angle;
-
     public void DoorRotationKey()
     {
         GetComponentInParent<CircularDrive>().minAngle = angle;
@@ -25,6 +26,7 @@ public class DoorOpen : MonoBehaviour
     public void DoorRotationCrowbar()
     {
         GetComponentInParent<CircularDrive>().minAngle = angle;
+        bedroomTP.GetComponent<TeleportArea>().locked = false;
         crowbar.GetComponentInChildren<Collider>().isTrigger = false;
         crowbar.GetComponentInChildren<Rigidbody>().useGravity = true;
         timer = 1;
