@@ -29,6 +29,10 @@ public class Inventory : MonoBehaviour
             itemRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             item.GetComponent<Collider>().enabled = true;
             item.GetComponent<AfterPickup>().timer = 1f;
+            if (item.GetComponent<Crowbar>())
+            {
+                item.GetComponent<Crowbar>().useable = true;
+            }
             item = null;
             itemRigidbody = null;
             gameObject.GetComponent<MeshRenderer>().enabled = true;
@@ -43,13 +47,17 @@ public class Inventory : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<Interactable>() && item == null && other.gameObject.layer == 9)
+        if (item == null && other.gameObject.layer == 9)
         {
             item = other.gameObject;
             itemRigidbody = item.GetComponent<Rigidbody>();
             item.GetComponent<Collider>().enabled = false;
-            gameObject.GetComponent<MeshRenderer>().enabled = false;
-            gameObject.GetComponent<SphereCollider>().enabled = false;
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<SphereCollider>().enabled = false;
+            if (item.GetComponent<Crowbar>())
+            {
+                item.GetComponent<Crowbar>().useable = false;
+            }
         }
     }
 }
