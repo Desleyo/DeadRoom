@@ -8,7 +8,7 @@ public class ColorPattern : MonoBehaviour
 {
     public GameObject[] colorObj;
     public Material[] colorMat;
-    public bool canClick, clicked, right, oneTime, done, chestOpen, clear;
+    public bool canClick, clicked, right, oneTime, done, chestOpen;
     public int controle;
     public float time, baseTime;
 
@@ -16,12 +16,6 @@ public class ColorPattern : MonoBehaviour
     public GameObject controller, closestColor, collerPattern, chest;
     public float distance, closestDistance = Mathf.Infinity;
     public bool currentInput;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -43,7 +37,7 @@ public class ColorPattern : MonoBehaviour
             canClick = true;
         }
 
-        if (canClick == true && !clear)
+        if (canClick == true)
         {
             if(currentInput && closestDistance <= 1)
             {
@@ -81,7 +75,7 @@ public class ColorPattern : MonoBehaviour
             }
         }
 
-        if (clicked == true)
+        if (clicked == true && !chestOpen)
         {
             if (oneTime == true)
             {
@@ -116,7 +110,6 @@ public class ColorPattern : MonoBehaviour
                     colorMat[4].DisableKeyword("_EMISSION");
                     collerPattern.SetActive(false);
                     chest.GetComponent<CircularDrive>().minAngle = -50;
-                    clear = true;
                 }
 
             }
