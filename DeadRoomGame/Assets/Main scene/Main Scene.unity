@@ -5579,8 +5579,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.09324292
-  m_Center: {x: -1.0081962, y: -0.029928952, z: 0.13045667}
+  m_Radius: 0.05643328
+  m_Center: {x: -1.0081962, y: -0.029928956, z: 0.09364709}
 --- !u!23 &743176714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9705,7 +9705,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dd558cf3f6250bc4387a249f3006319a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd558cf3f6250bc4387a249f3006319a, type: 3}
