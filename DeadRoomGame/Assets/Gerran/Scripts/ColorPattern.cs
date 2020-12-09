@@ -8,7 +8,7 @@ public class ColorPattern : MonoBehaviour
 {
     public GameObject[] colorObj;
     public Material[] colorMat;
-    public bool canClick, clicked, right, oneTime, done, chestOpen;
+    public bool canClick, clicked, right, oneTime, done, chestOpen, clear;
     public int controle;
     public float time, baseTime;
 
@@ -43,7 +43,7 @@ public class ColorPattern : MonoBehaviour
             canClick = true;
         }
 
-        if (canClick == true && !done)
+        if (canClick == true && !clear)
         {
             if(currentInput && closestDistance <= 1)
             {
@@ -116,6 +116,7 @@ public class ColorPattern : MonoBehaviour
                     colorMat[4].DisableKeyword("_EMISSION");
                     collerPattern.SetActive(false);
                     chest.GetComponent<CircularDrive>().minAngle = -50;
+                    clear = true;
                 }
 
             }
