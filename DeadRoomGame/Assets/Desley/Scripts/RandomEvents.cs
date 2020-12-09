@@ -13,6 +13,15 @@ public class RandomEvents : MonoBehaviour
 
     private void Start()
     {
+        if(canvas.GetComponent<Timer>().min <= 10)
+        {
+            devMode = true;
+        }
+        else
+        {
+            devMode = false;
+        }
+
         if (!devMode)
         {
             nextEventTimer = 120f;
