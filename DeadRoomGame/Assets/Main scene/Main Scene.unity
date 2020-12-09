@@ -6042,8 +6042,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.05643328
-  m_Center: {x: -1.0081962, y: -0.029928956, z: 0.09364709}
+  m_Radius: 0.072897844
+  m_Center: {x: -1.0081962, y: -0.029928952, z: 0.11011165}
 --- !u!23 &743176714
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12487,8 +12487,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.056433283
-  m_Center: {x: -1.005907, y: -0.029928956, z: -0.0886362}
+  m_Radius: 0.079644695
+  m_Center: {x: -1.005907, y: -0.029928952, z: -0.11184762}
 --- !u!23 &1576190176
 MeshRenderer:
   m_ObjectHideFlags: 0
