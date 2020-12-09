@@ -17060,7 +17060,7 @@ PrefabInstance:
         type: 3}
       propertyPath: crowbar
       value: 
-      objectReference: {fileID: 1222342246}
+      objectReference: {fileID: 341244107}
     - target: {fileID: 5007954508158740939, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: useable
