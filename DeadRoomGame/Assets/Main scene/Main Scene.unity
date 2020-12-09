@@ -9187,7 +9187,7 @@ MonoBehaviour:
   deerTotem: {fileID: 1182161450}
   mensTotem: {fileID: 853008242}
   skull: {fileID: 224933035}
-  timer: {fileID: 0}
+  timer: {fileID: 2046547829}
   deerTotemDone: 0
   addedTime: 1
   addNum: 2
@@ -16552,8 +16552,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02272879, y: 0.10743407, z: 0.3098085}
-  m_Center: {x: 2.410325e-10, y: 0, z: 0.0964461}
+  m_Size: {x: 0.07069779, y: 0.13203812, z: 0.3312662}
+  m_Center: {x: -0.0017334633, y: 0.0035419464, z: 0.085717246}
 --- !u!1 &2116303004
 GameObject:
   m_ObjectHideFlags: 0
