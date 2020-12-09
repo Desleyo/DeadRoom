@@ -3656,7 +3656,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473783653}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45b31ee76e59d6f42918fba1b091a00e, type: 3}
   m_Name: 
@@ -16809,7 +16809,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f0ce2b655c930a342bf3c42dde5c82a3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ce2b655c930a342bf3c42dde5c82a3, type: 3}
@@ -17055,7 +17055,7 @@ PrefabInstance:
         type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 341244107}
+      objectReference: {fileID: 743176709}
     - target: {fileID: 5007954508158740939, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: crowbar
