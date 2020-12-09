@@ -75,7 +75,7 @@ public class ColorPattern : MonoBehaviour
             }
         }
 
-        if (clicked == true && !chestOpen)
+        if (clicked == true)
         {
             if (oneTime == true)
             {
@@ -109,6 +109,7 @@ public class ColorPattern : MonoBehaviour
                     colorMat[3].DisableKeyword("_EMISSION");
                     colorMat[4].DisableKeyword("_EMISSION");
                     collerPattern.SetActive(false);
+                    GetComponent<Chest>().chestOpen = true;
                     chest.GetComponent<CircularDrive>().minAngle = -50;
                 }
 

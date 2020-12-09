@@ -16902,10 +16902,25 @@ PrefabInstance:
       propertyPath: crowbar
       value: 
       objectReference: {fileID: 1222342246}
+    - target: {fileID: 8311420135063938748, guid: 3b174f602b3a0584c9e22833aea621c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.019
+      objectReference: {fileID: 0}
+    - target: {fileID: 8311420135063938748, guid: 3b174f602b3a0584c9e22833aea621c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.859
+      objectReference: {fileID: 0}
+    - target: {fileID: 8311420135063938748, guid: 3b174f602b3a0584c9e22833aea621c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.681
+      objectReference: {fileID: 0}
     - target: {fileID: 8652479482607942662, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5007954508143620115, guid: 3b174f602b3a0584c9e22833aea621c7, type: 3}

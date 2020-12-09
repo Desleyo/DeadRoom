@@ -7,7 +7,7 @@ using Valve.VR.InteractionSystem;
 public class Chest : MonoBehaviour
 {
     public SteamVR_Action_Boolean input;
-    public bool currentInput;
+    public bool currentInput, chestOpen;
     public float distance;
     public GameObject controler, chest, colorPattern;
 
@@ -22,7 +22,7 @@ public class Chest : MonoBehaviour
     {
         currentInput = input.state;
         distance = Vector3.Distance(controler.transform.position, chest.transform.position);
-        if (currentInput && distance <= 1)
+        if (currentInput && distance <= 1 && !chestOpen)
         {
             colorPattern.SetActive(true);
         }
