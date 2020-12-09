@@ -36,7 +36,7 @@ public class DeerTotem : MonoBehaviour
     {
         if(collision.gameObject.name == "altar")
         {
-            deerTotem.transform.position = new Vector3(altar.transform.position.x, altar.transform.position.y + 1, altar.transform.position.z);
+            deerTotem.transform.position = new Vector3(altar.transform.position.x, altar.transform.position.y + .5f, altar.transform.position.z);
             deerTotem.transform.rotation = Quaternion.identity;
             deerTotem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             deerTotemDone = true;
