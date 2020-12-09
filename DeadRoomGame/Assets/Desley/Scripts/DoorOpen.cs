@@ -16,6 +16,14 @@ public class DoorOpen : MonoBehaviour
     public float timer = Mathf.Infinity;
     public bool doorBroken;
     public int angle;
+
+    public void DoorFuseBox()
+    {
+        GetComponent<CircularDrive>().maxAngle = angle;
+        key.transform.SetParent(transform);
+        key.GetComponent<Collider>().enabled = false;
+    }
+
     public void DoorRotationKey()
     {
         GetComponentInParent<CircularDrive>().minAngle = angle;
