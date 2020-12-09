@@ -20,8 +20,9 @@ public class DropPainting : MonoBehaviour
         foreach (GameObject hand in hands)
         {
             distance = Vector3.Distance(transform.position, hand.transform.position);
-            if(distance <= .1 && Grab)
+            if(distance <= .3 && Grab)
             {
+                GetComponent<Rigidbody>().isKinematic = false;
                 GetComponent<Rigidbody>().useGravity = true;  
             }
         }
