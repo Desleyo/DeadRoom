@@ -43,7 +43,7 @@ public class ColorPattern : MonoBehaviour
             canClick = true;
         }
 
-        if (canClick == true)
+        if (canClick == true && !chestOpen)
         {
             if(currentInput && closestDistance <= 1)
             {

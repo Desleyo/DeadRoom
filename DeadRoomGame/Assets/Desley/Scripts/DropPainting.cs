@@ -7,31 +7,23 @@ using Valve.VR.InteractionSystem;
 public class DropPainting : MonoBehaviour
 {
     public SteamVR_Action_Boolean Trigger;
-    public bool Grab, handCollision;
+    public GameObject[] hands;
+    public bool Grab;
+    public float distance = Mathf.Infinity;
 
     // Update is called once per frame
     void Update()
     {
         Grab = Trigger.state;
+        distance = Mathf.Infinity;
 
-        if (Grab && handCollision)
+        foreach (GameObject hand in hands)
         {
-                GetComponent<Rigidbody>().useGravity = true;
-        }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Hand")
-        {
-            handCollision = true;
-        }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if(collision.gameObject.tag == "Hand")
-        {
-            handCollision = false;
+            distance = Vector3.Distance(transform.position, hand.transform.position);
+            if(distance <= .1 && Grab)
+            {
+                GetComponent<Rigidbody>().useGravity = true;  
+            }
         }
     }
 }

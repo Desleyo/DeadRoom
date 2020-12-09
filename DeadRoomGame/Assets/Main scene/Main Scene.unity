@@ -9113,8 +9113,9 @@ MonoBehaviour:
   Trigger:
     actionPath: /actions/default/in/GrabPinch
     needsReinit: 0
+  hands: []
   Grab: 0
-  handCollision: 0
+  distance: Infinity
 --- !u!54 &1347956249
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9196,6 +9197,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7000003, y: 0.86491954, z: 0.06377927}
   m_Center: {x: 0, y: 0.068764284, z: 0.011007637}
+--- !u!114 &1347956252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347956247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 0
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &1347956253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347956247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09abb0c344a638d4a8181e21604b8ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1348651908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2606028299454504691, guid: fe6b7744f8b8e5545a2f6f9c4e16af31,
