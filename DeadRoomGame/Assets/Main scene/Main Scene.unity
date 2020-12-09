@@ -9632,7 +9632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1222342247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16944,7 +16944,7 @@ PrefabInstance:
     - target: {fileID: 2964399829991654294, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3801735040007102823, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
@@ -17055,12 +17055,12 @@ PrefabInstance:
         type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 743176709}
+      objectReference: {fileID: 341244107}
     - target: {fileID: 5007954508158740939, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: crowbar
       value: 
-      objectReference: {fileID: 341244107}
+      objectReference: {fileID: 1222342246}
     - target: {fileID: 5007954508158740939, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: useable
