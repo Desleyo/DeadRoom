@@ -10757,7 +10757,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 451689253, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.122
+      value: 0.175
       objectReference: {fileID: 0}
     - target: {fileID: 1829321301, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: m_RenderPostProcessing
