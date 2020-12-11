@@ -7722,17 +7722,17 @@ PrefabInstance:
     - target: {fileID: 3092896711638343180, guid: 996ba9cf14eb42441bfa915c39aaa709,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.521
+      value: 19.519
       objectReference: {fileID: 0}
     - target: {fileID: 3092896711638343180, guid: 996ba9cf14eb42441bfa915c39aaa709,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.74
+      value: -23.768
       objectReference: {fileID: 0}
     - target: {fileID: 3092896711638343180, guid: 996ba9cf14eb42441bfa915c39aaa709,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -40.846
+      value: -40.847
       objectReference: {fileID: 0}
     - target: {fileID: 3092896711638343180, guid: 996ba9cf14eb42441bfa915c39aaa709,
         type: 3}
@@ -8768,7 +8768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1222342247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10791,7 +10791,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f0ce2b655c930a342bf3c42dde5c82a3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.609
+      value: 19.642
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0ce2b655c930a342bf3c42dde5c82a3,
         type: 3}
@@ -10801,7 +10801,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f0ce2b655c930a342bf3c42dde5c82a3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -41.039
+      value: -41.06
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0ce2b655c930a342bf3c42dde5c82a3,
         type: 3}
@@ -10937,7 +10937,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1548748470
 Transform:
   m_ObjectHideFlags: 0
@@ -11243,12 +11243,12 @@ MonoBehaviour:
   onFrozenDistanceThreshold:
     m_PersistentCalls:
       m_Calls: []
-  minAngle: 0
+  minAngle: 180
   freezeOnMin: 0
   onMinAngle:
     m_PersistentCalls:
       m_Calls: []
-  maxAngle: 0
+  maxAngle: 270
   freezeOnMax: 0
   onMaxAngle:
     m_PersistentCalls:
@@ -11267,8 +11267,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584593436}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 21.585, y: -22.684, z: -37.637}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 20.425, y: -22.684, z: -37.637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 341244108}
@@ -11276,7 +11276,7 @@ Transform:
   - {fileID: 1576190174}
   m_Father: {fileID: 0}
   m_RootOrder: 33
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1604369964 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2606028299454504691, guid: fe6b7744f8b8e5545a2f6f9c4e16af31,
