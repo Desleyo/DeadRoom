@@ -19,16 +19,14 @@ public class DoorOpen : MonoBehaviour
 
     public void DoorFuseBox()
     {
-        GetComponent<CircularDrive>().maxAngle = angle;
-        key.transform.SetParent(transform);
+        GetComponentInParent<CircularDrive>().maxAngle = angle;
         key.GetComponent<Collider>().enabled = false;
     }
 
     public void DoorRotationKey()
     {
         GetComponentInParent<CircularDrive>().minAngle = angle;
-            key.transform.SetParent(transform);
-            key.GetComponent<Collider>().enabled = false;
+        key.GetComponentInChildren<Collider>().enabled = false;
     }
 
     public void DoorRotationCrowbar()
