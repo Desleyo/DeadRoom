@@ -6,7 +6,7 @@ public class Crowbar : MonoBehaviour
 {
     public GameObject crowbar, door;
     public float distance;
-    public bool useable;
+    public bool useable = true;
 
     // Update is called once per frame
     void Update()

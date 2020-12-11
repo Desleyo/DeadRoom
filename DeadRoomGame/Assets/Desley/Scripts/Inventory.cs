@@ -29,9 +29,16 @@ public class Inventory : MonoBehaviour
             itemRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             item.GetComponent<Collider>().enabled = true;
             item.GetComponent<AfterPickup>().timer = 1f;
-            if (item.GetComponent<Crowbar>())
+            if(item.tag == "useable")
             {
-                item.GetComponent<Crowbar>().useable = true;
+                if(item.GetComponent<Crowbar>())
+                {
+                    item.GetComponent<Crowbar>().useable = true;
+                }
+                else if(item.GetComponent<Key>())
+                {
+                    item.GetComponent<Key>().useable = true;
+                }
             }
             item = null;
             itemRigidbody = null;
@@ -54,9 +61,16 @@ public class Inventory : MonoBehaviour
             item.GetComponent<Collider>().enabled = false;
             GetComponent<MeshRenderer>().enabled = false;
             GetComponent<SphereCollider>().enabled = false;
-            if (item.GetComponent<Crowbar>())
+            if (item.tag == "useable")
             {
-                item.GetComponent<Crowbar>().useable = false;
+                if (item.GetComponent<Crowbar>())
+                {
+                    item.GetComponent<Crowbar>().useable = false;
+                }
+                else if (item.GetComponent<Key>())
+                {
+                    item.GetComponent<Key>().useable = false;
+                }
             }
         }
     }

@@ -10,7 +10,7 @@ TagManager:
   - Color4
   - Hand
   - Ground
-  - Fusebox Key
+  - useable
   layers:
   - Default
   - TransparentFX
