@@ -11182,7 +11182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axisOfRotation: 1
-  childCollider: {fileID: 743176711}
+  childCollider: {fileID: 0}
   linearMapping: {fileID: 0}
   hoverLock: 0
   limited: 1
@@ -11190,12 +11190,12 @@ MonoBehaviour:
   onFrozenDistanceThreshold:
     m_PersistentCalls:
       m_Calls: []
-  minAngle: 0
+  minAngle: -90
   freezeOnMin: 0
   onMinAngle:
     m_PersistentCalls:
       m_Calls: []
-  maxAngle: -90
+  maxAngle: 0
   freezeOnMax: 0
   onMaxAngle:
     m_PersistentCalls:
