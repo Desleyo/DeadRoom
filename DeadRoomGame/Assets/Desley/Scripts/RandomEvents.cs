@@ -6,10 +6,10 @@ public class RandomEvents : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject[] soundPositions;
-    public GameObject scratchPos, staringPos;
+    public GameObject scratchPos, staringPos, wendigoPos;
     public int randomEvent, randomMin, randomMax;
     public float gameTimer, nextEventTimer, timerMin, timerMax;
-    public bool devMode;
+    public bool devMode, playable = true;
 
     private void Start()
     {
@@ -38,6 +38,11 @@ public class RandomEvents : MonoBehaviour
         nextEventTimer -= Time.deltaTime;
         gameTimer = canvas.GetComponent<Timer>().min;
 
+        if (gameTimer == 0 && canvas.GetComponent<Timer>().sec == 0)
+        {
+            playable = false;
+        }
+
         if (!devMode)
         {
             if (gameTimer >= 12)
@@ -65,7 +70,7 @@ public class RandomEvents : MonoBehaviour
             }
         }
 
-        if(nextEventTimer <= 0)
+        if(nextEventTimer <= 0 && playable)
         {
             randomEvent = Random.Range(randomMin, randomMax);
             nextEventTimer = Random.Range(timerMin, timerMax);
@@ -97,7 +102,8 @@ public class RandomEvents : MonoBehaviour
         }
         else if(eventNumber >= 12 && eventNumber <= 13)
         {
-            //runBy
+            wendigoPos.SetActive(true);
+            wendigoPos.GetComponent<WalkBy>().reset = false;
         }
     }
 }
