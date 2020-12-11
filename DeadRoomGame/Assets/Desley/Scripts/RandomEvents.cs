@@ -48,7 +48,7 @@ public class RandomEvents : MonoBehaviour
             else
             {
                 randomMin = 5;
-                randomMax = 16;
+                randomMax = 14;
             }
         }
         else
@@ -61,7 +61,7 @@ public class RandomEvents : MonoBehaviour
             else
             {
                 randomMin = 5;
-                randomMax = 16;
+                randomMax = 14;
             }
         }
 
@@ -69,7 +69,7 @@ public class RandomEvents : MonoBehaviour
         {
             randomEvent = Random.Range(randomMin, randomMax);
             nextEventTimer = Random.Range(timerMin, timerMax);
-            if(randomEvent >= 0 && randomEvent <= 9)
+            if(randomEvent >= 0 && randomEvent <= 7)
             {
                 PlaySound(randomEvent);
             }
@@ -87,15 +87,15 @@ public class RandomEvents : MonoBehaviour
 
     public void PlayEvent(int eventNumber)
     {
-        if(eventNumber >= 10 && eventNumber <=11)
+        if(eventNumber >= 8 && eventNumber <=9)
         {
             scratchPos.GetComponent<StairScratch>().Randomize();
         }
-        else if(eventNumber >= 12 && eventNumber <= 13)
+        else if(eventNumber >= 10 && eventNumber <= 11)
         {
             staringPos.GetComponent<StairScratch>().Randomize();
         }
-        else if(eventNumber >= 14 && eventNumber <= 15)
+        else if(eventNumber >= 12 && eventNumber <= 13)
         {
             //runBy
         }

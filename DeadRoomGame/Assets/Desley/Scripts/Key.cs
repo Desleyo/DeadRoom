@@ -14,7 +14,7 @@ public class Key : MonoBehaviour
     void Update()
     {
         distance = Vector3.Distance(transform.position, keyhole.transform.position);
-        if(distance <= .6f && useable)
+        if(distance <= .5f && useable)
         {
             if(fusebox)
             {
