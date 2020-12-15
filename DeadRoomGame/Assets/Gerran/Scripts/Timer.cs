@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float sec, min;
-    public GameObject gameoverPanel;
+    public GameObject gameoverPanel, eventPlayer;
     public Text secText, minText;
 
     // Start is called before the first frame update
@@ -33,8 +33,7 @@ public class Timer : MonoBehaviour
 
             else if(min == 0)
             {
-                gameoverPanel.SetActive(true);
-                Time.timeScale = 0;
+                eventPlayer.GetComponent<DeathEvent>().onTimeUp();
             }
         }
 

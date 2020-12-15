@@ -11,6 +11,8 @@ TagManager:
   - Hand
   - Ground
   - useable
+  - upstairs
+  - basement
   layers:
   - Default
   - TransparentFX

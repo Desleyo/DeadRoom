@@ -38,7 +38,7 @@ public class RandomEvents : MonoBehaviour
         nextEventTimer -= Time.deltaTime;
         gameTimer = canvas.GetComponent<Timer>().min;
 
-        if (gameTimer == 0 && canvas.GetComponent<Timer>().sec == 0)
+        if (gameTimer == 0 && canvas.GetComponent<Timer>().sec <= 30)
         {
             playable = false;
         }
