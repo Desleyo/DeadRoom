@@ -712,7 +712,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!114 &106518206
 MonoBehaviour:
@@ -5423,7 +5423,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!114 &735971995
 MonoBehaviour:
@@ -12505,6 +12505,7 @@ MonoBehaviour:
   playerPos: {fileID: 1018605759}
   randomizer: 0
   attacked: 0
+  distance: 0
 --- !u!95 &1652617906
 Animator:
   serializedVersion: 3
@@ -12538,7 +12539,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -16245,6 +16246,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 6144323161338986635, guid: 3b174f602b3a0584c9e22833aea621c7,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6992317197897569037, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16290,6 +16296,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: upstairs
       objectReference: {fileID: 0}
+    - target: {fileID: 7286875413250601817, guid: 3b174f602b3a0584c9e22833aea621c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7371870118478236821, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: crowbar
@@ -16314,6 +16325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8621137202390020244, guid: 3b174f602b3a0584c9e22833aea621c7,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8652479482607942662, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}

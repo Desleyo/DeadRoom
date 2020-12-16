@@ -9,6 +9,7 @@ public class Attack : MonoBehaviour
     NavMeshAgent agent;
     public int randomizer;
     public bool attacked;
+    public float distance;
 
     private void Start()
     {
@@ -19,9 +20,9 @@ public class Attack : MonoBehaviour
     void Update()
     {
         agent.SetDestination(playerPos.position);
-        float distance = Vector3.Distance(transform.position, playerPos.position);
+        distance = Vector3.Distance(transform.position, playerPos.position);
 
-        if(distance <= 1)
+        if(distance <= 1.5)
         {
             GetComponent<Animator>().SetBool("preAttack", true);
             if (!attacked)
