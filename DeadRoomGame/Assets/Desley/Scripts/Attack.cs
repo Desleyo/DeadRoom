@@ -9,11 +9,12 @@ public class Attack : MonoBehaviour
     NavMeshAgent agent;
     public int randomizer;
     public bool attacked;
-    public float distance;
+    public float distance, timer;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        timer = 7f;
     }
 
     // Update is called once per frame
@@ -21,8 +22,9 @@ public class Attack : MonoBehaviour
     {
         agent.SetDestination(playerPos.position);
         distance = Vector3.Distance(transform.position, playerPos.position);
+        timer -= Time.deltaTime;
 
-        if(distance <= 1.5)
+        if(distance <= agent.stoppingDistance)
         {
             GetComponent<Animator>().SetBool("preAttack", true);
             if (!attacked)
@@ -31,6 +33,11 @@ public class Attack : MonoBehaviour
                 GetComponent<Animator>().SetInteger("randomized", randomizer);
                 attacked = true;
             }
+        }
+        else if(timer <= 0)
+        {
+            timer = Mathf.Infinity;
+            agent.stoppingDistance = 2.5f;
         }
     }
 }

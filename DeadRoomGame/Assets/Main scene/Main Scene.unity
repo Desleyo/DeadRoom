@@ -2748,8 +2748,8 @@ GameObject:
   m_Name: InsideDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 40
   m_IsActive: 1
 --- !u!4 &341244108
 Transform:
@@ -12506,6 +12506,7 @@ MonoBehaviour:
   randomizer: 0
   attacked: 0
   distance: 0
+  timer: 0
 --- !u!95 &1652617906
 Animator:
   serializedVersion: 3
@@ -16234,7 +16235,7 @@ PrefabInstance:
     - target: {fileID: 5007954510091248781, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_TagString
-      value: upstairs
+      value: basement
       objectReference: {fileID: 0}
     - target: {fileID: 5134159253214317000, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}

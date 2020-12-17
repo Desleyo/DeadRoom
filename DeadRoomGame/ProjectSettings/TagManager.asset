@@ -13,6 +13,7 @@ TagManager:
   - useable
   - upstairs
   - basement
+  - bedroom
   layers:
   - Default
   - TransparentFX
