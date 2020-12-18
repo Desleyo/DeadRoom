@@ -7,6 +7,8 @@ public class DeerTotem : MonoBehaviour
     public GameObject altar, deerTotem, mensTotem, skull, timer;
     public bool deerTotemDone, addedTime;
     public float addNum;
+    public AudioClip sound;
+    public AudioSource source;
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,7 @@ public class DeerTotem : MonoBehaviour
     public void AddTime()
     {
         timer.GetComponent<Timer>().min += addNum;
+        source.PlayOneShot(sound);
         addedTime = false;
     }
 }

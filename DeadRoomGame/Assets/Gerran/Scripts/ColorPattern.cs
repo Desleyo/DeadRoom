@@ -17,6 +17,9 @@ public class ColorPattern : MonoBehaviour
     public float distance, closestDistance = Mathf.Infinity;
     public bool currentInput;
 
+    public AudioSource source;
+    public AudioClip clip;
+
     // Update is called once per frame
     void Update()
     {
@@ -94,6 +97,7 @@ public class ColorPattern : MonoBehaviour
                 {
                     time -= Time.deltaTime;
                     chestOpen = true;
+                    source.PlayOneShot(clip);
                     colorMat[0].EnableKeyword("_EMISSION");
                     colorMat[1].EnableKeyword("_EMISSION");
                     colorMat[2].EnableKeyword("_EMISSION");
