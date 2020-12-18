@@ -10,14 +10,22 @@ public class DeathEvent : MonoBehaviour
 
     public void onTimeUp()
     {
-        if (player.GetComponent<PlayerController>().inBasement == true)
+        if (player.GetComponent<PlayerController>().room == 0)
         {
             //activate stairs wendigo
         }
-        else
+        else if(player.GetComponent<PlayerController>().room == 1)
         {
             mainDoor.transform.eulerAngles = new Vector3(0, -90, 0);
             wendigoM.SetActive(true);
+            wendigoM.GetComponent<Attack>().canWalk = true;
+        }
+        else if (player.GetComponent<PlayerController>().room == 2)
+        {
+            mainDoor.transform.eulerAngles = new Vector3(0, -90, 0);
+            wendigoM.transform.eulerAngles = new Vector3(0, 180, 0);
+            wendigoM.SetActive(true);
+            wendigoM.GetComponent<Attack>().canWalk = false;
         }
 
         player.GetComponent<PlayerController>().speed = 0;

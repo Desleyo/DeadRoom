@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private CharacterController controller;
     public SteamVR_Action_Vector2 input;
-    public bool inBasement;
+    public int room;
     public float speed = 1;
 
     void Start()
@@ -28,13 +28,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "basement")
+        if (collision.gameObject.tag == "basement")
         {
-            inBasement = true;
+            room = 0;
         }
-        else if(collision.gameObject.tag == "upstairs")
+        else if (collision.gameObject.tag == "mainroom")
         {
-            inBasement = false;
+            room = 1;
+        }
+        else if (collision.gameObject.tag == "bedroom")
+        {
+            room = 2;
         }
     }
 }
