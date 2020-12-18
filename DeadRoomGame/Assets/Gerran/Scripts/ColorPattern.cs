@@ -17,6 +17,7 @@ public class ColorPattern : MonoBehaviour
     public float distance, closestDistance = Mathf.Infinity;
     public bool currentInput;
 
+    public AudioSource audioSource;
     public AudioSource source;
     public AudioClip clip;
 
@@ -115,6 +116,7 @@ public class ColorPattern : MonoBehaviour
                     collerPattern.SetActive(false);
                     GetComponent<Chest>().chestOpen = true;
                     chest.GetComponent<CircularDrive>().minAngle = -50;
+                    audioSource.Play();
                 }
 
             }

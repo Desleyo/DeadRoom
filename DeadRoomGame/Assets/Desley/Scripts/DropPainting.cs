@@ -6,6 +6,7 @@ using Valve.VR.InteractionSystem;
 
 public class DropPainting : MonoBehaviour
 {
+    public AudioSource audioSource;
     public SteamVR_Action_Boolean Trigger;
     public GameObject[] hands;
     public bool Grab;
@@ -23,7 +24,8 @@ public class DropPainting : MonoBehaviour
             if(distance <= .3 && Grab)
             {
                 GetComponent<Rigidbody>().isKinematic = false;
-                GetComponent<Rigidbody>().useGravity = true;  
+                GetComponent<Rigidbody>().useGravity = true;
+                audioSource.Play();
             }
         }
     }
