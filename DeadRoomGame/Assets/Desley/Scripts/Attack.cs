@@ -21,11 +21,6 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (boolTest)
-        {
-            canWalk = true;
-        }
-
         if(canWalk)
         {
             agent.SetDestination(playerPos.position);
@@ -77,7 +72,6 @@ public class Attack : MonoBehaviour
             GetComponent<NavMeshAgent>().enabled = true;
             walkPoint.gameObject.SetActive(false);
             canWalk = true;
-            boolTest = true;
             fallbackTimer = 2f;
         }
 

@@ -8,6 +8,7 @@ public class Timer : MonoBehaviour
     public float sec, min;
     public GameObject gameoverPanel, eventPlayer;
     public Text secText, minText;
+    public bool deathCalled;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +32,10 @@ public class Timer : MonoBehaviour
                 sec = 60;
             }
 
-            else if(min == 0)
+            else if(min == 0 && !deathCalled)
             {
                 eventPlayer.GetComponent<DeathEvent>().onTimeUp();
+                deathCalled = true;
             }
         }
 
