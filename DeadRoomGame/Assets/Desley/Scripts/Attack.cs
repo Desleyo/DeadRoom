@@ -5,17 +5,16 @@ using UnityEngine.AI;
 
 public class Attack : MonoBehaviour
 {
+    public GameObject wendigoD;
     public Transform playerPos, walkPoint;
     NavMeshAgent agent;
     public int randomizer;
-    public bool attacked, canWalk, boolTest, setTimer;
-    public float distance, fallbackTimer, walkTimer, speed = .75f;
+    public bool attacked, canWalk, stairs, setTimer;
+    public float distance, fallbackTimer, walkTimer = Mathf.Infinity, speed = .75f;
 
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        fallbackTimer = 7f;
-        walkTimer = Mathf.Infinity;
     }
 
     // Update is called once per frame
@@ -32,17 +31,24 @@ public class Attack : MonoBehaviour
                 startAttack();
             }
         }
-        else
+        else if(!stairs)
         {
             walkTowards();
         }
 
         walkTimer -= Time.deltaTime;
 
-        if (walkTimer <= 0)
+        if (walkTimer <= 0 && !stairs)
         {
             walkTimer = Mathf.Infinity;
             GetComponent<NavMeshAgent>().enabled = false;
+        }
+        else if(walkTimer <= 0 && stairs)
+        {
+            wendigoD.SetActive(true);
+            wendigoD.GetComponent<Animator>().SetBool("walk", true);
+            wendigoD.GetComponent<Attack>().fallbackTimer = 3f;
+            gameObject.SetActive(false);
         }
 
         if(fallbackTimer <= 0 && !attacked)
