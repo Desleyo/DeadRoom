@@ -1,20 +1,49 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
 
 public class FireExtinguisher : MonoBehaviour
 {
     public Transform firePos;
     public GameObject extinguisher;
 
+    public AudioSource audioSource;
+    public SteamVR_Action_Boolean Trigger;
+    public GameObject[] hands;
+    public GameObject fire;
+    public bool Grab;
+    public float distance = Mathf.Infinity;
+
+    public bool switched;
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, firePos.position);
-        if(distance <= 1)
+        if (!switched)
         {
-            extinguisher.SetActive(true);
-            Destroy(gameObject);
+            float distance = Vector3.Distance(transform.position, firePos.position);
+            if (distance <= 1)
+            {
+                extinguisher.SetActive(true);
+                extinguisher.GetComponent<FireExtinguisher>().switched = true;
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            Grab = Trigger.state;
+            distance = Mathf.Infinity;
+            foreach (GameObject hand in hands)
+            {
+                distance = Vector3.Distance(transform.position, hand.transform.position);
+                if (distance <= .6 && Grab)
+                {
+                    //play particle
+                    fire.SetActive(false);
+                    audioSource.Play();
+                }
+            }
         }
     }
 }
