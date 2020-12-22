@@ -13194,7 +13194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: room
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: speed
