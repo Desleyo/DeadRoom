@@ -26,17 +26,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "basement")
+        if(other.gameObject.tag == "basement")
         {
             room = 0;
         }
-        else if (collision.gameObject.tag == "mainroom")
+        else if(other.gameObject.tag == "mainroom")
         {
             room = 1;
         }
-        else if (collision.gameObject.tag == "bedroom")
+        else if(other.gameObject.tag == "bedroom")
         {
             room = 2;
         }
