@@ -8,9 +8,11 @@ public class Attack : MonoBehaviour
     public GameObject wendigoD;
     public Transform playerPos, walkPoint, spawnPoint;
     NavMeshAgent agent;
+    public AudioSource preAttack, attack;
+    public AudioClip[] attackSounds;
     public int randomizer, room;
-    public bool attacked, canWalk, stairs, setTimer;
-    public float distance, fallbackTimer, walkTimer = Mathf.Infinity, speed = .75f;
+    public bool attacked, canWalk, stairs, setTimer, attackStarted;
+    public float distance, fallbackTimer, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
 
     private void Start()
     {
@@ -26,9 +28,10 @@ public class Attack : MonoBehaviour
             distance = Vector3.Distance(transform.position, playerPos.position);
             fallbackTimer -= Time.deltaTime;
 
-            if (distance <= agent.stoppingDistance)
+            if (distance <= agent.stoppingDistance && !attackStarted)
             {
                 startAttack();
+                attackStarted = true;
             }
         }
         else if(!stairs)
@@ -56,16 +59,27 @@ public class Attack : MonoBehaviour
             fallbackTimer = Mathf.Infinity;
             agent.stoppingDistance = 2.5f;
         }
+
+        if(attackSoundTimer <= 0)
+        {
+            attackSoundTimer = Mathf.Infinity;
+            attack.clip = attackSounds[randomizer];
+            attack.Play();
+        }
+
+        attackSoundTimer -= Time.deltaTime;
     }
 
     void startAttack()
     {
         transform.LookAt(playerPos);
         GetComponent<Animator>().SetBool("preAttack", true);
+        preAttack.Play();
         if (!attacked)
         {
-            randomizer = Random.Range(1, 7);
+            randomizer = Random.Range(0, 6);
             GetComponent<Animator>().SetInteger("randomized", randomizer);
+            attackSoundTimer = 8;
             attacked = true;
         }
     }
