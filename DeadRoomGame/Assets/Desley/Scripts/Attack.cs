@@ -6,9 +6,9 @@ using UnityEngine.AI;
 public class Attack : MonoBehaviour
 {
     public GameObject wendigoD;
-    public Transform playerPos, walkPoint;
+    public Transform playerPos, walkPoint, spawnPoint;
     NavMeshAgent agent;
-    public int randomizer;
+    public int randomizer, room;
     public bool attacked, canWalk, stairs, setTimer;
     public float distance, fallbackTimer, walkTimer = Mathf.Infinity, speed = .75f;
 
@@ -71,14 +71,28 @@ public class Attack : MonoBehaviour
 
     void walkTowards()
     {
-        transform.position = Vector3.MoveTowards(transform.position, walkPoint.position, speed * Time.deltaTime);
-        float pointDistance = Vector3.Distance(transform.position, walkPoint.position);
-        if (pointDistance <= .1f)
+        if(room == 2)
         {
-            GetComponent<NavMeshAgent>().enabled = true;
-            walkPoint.gameObject.SetActive(false);
-            canWalk = true;
-            fallbackTimer = 2f;
+            transform.position = Vector3.MoveTowards(transform.position, walkPoint.position, speed * Time.deltaTime);
+            float pointDistance = Vector3.Distance(transform.position, walkPoint.position);
+            if (pointDistance <= .1f)
+            {
+                GetComponent<NavMeshAgent>().enabled = true;
+                walkPoint.gameObject.SetActive(false);
+                canWalk = true;
+                fallbackTimer = 2f;
+            }
+        }
+        else if(room == 1)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, spawnPoint.position, speed * Time.deltaTime);
+            float pointDistance = Vector3.Distance(transform.position, spawnPoint.position);
+            if (pointDistance <= .1f)
+            {
+                GetComponent<NavMeshAgent>().enabled = true;
+                spawnPoint.gameObject.SetActive(false);
+                canWalk = true;
+            }
         }
 
         if (!setTimer)

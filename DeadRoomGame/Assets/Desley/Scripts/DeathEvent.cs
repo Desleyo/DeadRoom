@@ -24,7 +24,7 @@ public class DeathEvent : MonoBehaviour
             mainDoor.transform.eulerAngles = new Vector3(0, -90, 0);
             wendigoM.SetActive(true);
             wendigoM.GetComponent<Animator>().SetBool("walk", true);
-            wendigoM.GetComponent<Attack>().canWalk = true;
+            wendigoM.GetComponent<Attack>().room = 1;
         }
         else if (player.GetComponent<PlayerController>().room == 2)
         {
@@ -32,7 +32,7 @@ public class DeathEvent : MonoBehaviour
             wendigoM.transform.eulerAngles = new Vector3(0, 180, 0);
             wendigoM.SetActive(true);
             wendigoM.GetComponent<Animator>().SetBool("walk", true);
-            wendigoM.GetComponent<Attack>().canWalk = false;
+            wendigoM.GetComponent<Attack>().room = 2;
         }
 
         player.GetComponent<PlayerController>().speed = 0;
