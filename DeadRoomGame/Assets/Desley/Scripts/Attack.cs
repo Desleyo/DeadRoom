@@ -60,6 +60,7 @@ public class Attack : MonoBehaviour
 
     void startAttack()
     {
+        transform.LookAt(playerPos);
         GetComponent<Animator>().SetBool("preAttack", true);
         if (!attacked)
         {
