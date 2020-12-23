@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Attack : MonoBehaviour
 {
@@ -10,8 +12,10 @@ public class Attack : MonoBehaviour
     NavMeshAgent agent;
     public AudioSource preAttack, attack;
     public AudioClip[] attackSounds;
+    public Image image;
+    public Color alpha;
     public int randomizer, room;
-    public bool attacked, canWalk, stairs, setTimer, attackStarted;
+    public bool attacked, canWalk, stairs, setTimer, attackStarted, fadeToBlack;
     public float distance, fallbackTimer, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
 
     private void Start()
@@ -65,9 +69,21 @@ public class Attack : MonoBehaviour
             attackSoundTimer = Mathf.Infinity;
             attack.clip = attackSounds[randomizer];
             attack.Play();
+            fadeToBlack = true;
         }
 
         attackSoundTimer -= Time.deltaTime;
+
+        if (fadeToBlack)
+        {
+            alpha = image.GetComponent<Image>().color;
+            alpha.a += .005f;
+            image.GetComponent<Image>().color = alpha;
+            if (alpha.a >= 1f)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 
     void startAttack()
