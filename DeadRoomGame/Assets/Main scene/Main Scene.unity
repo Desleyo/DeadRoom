@@ -2961,7 +2961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 284983157}
   - component: {fileID: 284983156}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: basement trigger
   m_TagString: basement
   m_Icon: {fileID: 0}
@@ -3627,7 +3627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417027725}
   - component: {fileID: 417027724}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: mainroom trigger (2)
   m_TagString: mainroom
   m_Icon: {fileID: 0}
@@ -15405,7 +15405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692005955}
   - component: {fileID: 1692005954}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: bedroom trigger
   m_TagString: bedroom
   m_Icon: {fileID: 0}
@@ -18125,7 +18125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070232820}
   - component: {fileID: 2070232819}
-  m_Layer: 2
+  m_Layer: 10
   m_Name: mainroom trigger
   m_TagString: mainroom
   m_Icon: {fileID: 0}
