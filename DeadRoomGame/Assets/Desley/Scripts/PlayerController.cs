@@ -25,20 +25,4 @@ public class PlayerController : MonoBehaviour
             controller.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.gameObject.tag == "basement")
-        {
-            room = 0;
-        }
-        else if(other.gameObject.tag == "mainroom")
-        {
-            room = 1;
-        }
-        else if(other.gameObject.tag == "bedroom")
-        {
-            room = 2;
-        }
-    }
 }
