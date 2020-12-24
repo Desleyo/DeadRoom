@@ -3080,6 +3080,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287013991}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &294406229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294406230}
+  m_Layer: 0
+  m_Name: checkpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294406230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294406229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.036, y: -24.018, z: -37.634}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 53
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &297425495
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13969,6 +13999,10 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
+      propertyPath: checkPoint
+      value: 
+      objectReference: {fileID: 294406230}
     - target: {fileID: 1996746585, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: targets.Array.size
       value: 11
@@ -16155,7 +16189,7 @@ Transform:
   m_GameObject: {fileID: 1749482224}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.32701683, y: -2.83, z: 2.6254425}
-  m_LocalScale: {x: 0.65550137, y: 0.71172, z: 0.7640631}
+  m_LocalScale: {x: 0.57028764, y: 0.619198, z: 0.6647367}
   m_Children: []
   m_Father: {fileID: 1222987929}
   m_RootOrder: 0
@@ -19321,7 +19355,7 @@ PrefabInstance:
     - target: {fileID: 4262210622334310923, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_TagString
-      value: basement
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5007954508143620119, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
@@ -19391,7 +19425,7 @@ PrefabInstance:
     - target: {fileID: 5007954510091248781, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_TagString
-      value: basement
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5007954510091248781, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
@@ -19461,7 +19495,7 @@ PrefabInstance:
     - target: {fileID: 7286875413250601817, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_TagString
-      value: upstairs
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7286875413250601817, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}

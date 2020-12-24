@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public int room;
     public float speed = 1;
 
+    public Transform checkPoint;
+
     void Start()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -24,15 +26,16 @@ public class PlayerController : MonoBehaviour
             Vector3 direction = Player.instance.hmdTransform.TransformDirection(new Vector3(input.axis.x, 0, input.axis.y));
             controller.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
         }
-    }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "basement")
+        if(checkPoint.position.z > transform.position.z)
+        {
+            room = 2;
+        }
+        else if(checkPoint.position.y > transform.position.y)
         {
             room = 0;
         }
-        else if(collision.gameObject.tag == "upstairs")
+        else if(checkPoint.position.z < transform.position.z && checkPoint.position.y < transform.position.y)
         {
             room = 1;
         }
