@@ -2961,7 +2961,7 @@ GameObject:
   m_Component:
   - component: {fileID: 284983157}
   - component: {fileID: 284983156}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: basement trigger
   m_TagString: basement
   m_Icon: {fileID: 0}
@@ -2979,8 +2979,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.634985, y: 2.8651009, z: 7.7268314}
-  m_Center: {x: 0.09412861, y: 1.0754566, z: 0.05019474}
+  m_Size: {x: 6.634985, y: 3.0937004, z: 7.7268314}
+  m_Center: {x: 0.09412861, y: 0.96115685, z: 0.05019474}
 --- !u!4 &284983157
 Transform:
   m_ObjectHideFlags: 0
@@ -3627,7 +3627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 417027725}
   - component: {fileID: 417027724}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: mainroom trigger (2)
   m_TagString: mainroom
   m_Icon: {fileID: 0}
@@ -12888,6 +12888,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 87138877b2dc23b4da67e880f44268ca,
+        type: 3}
+      propertyPath: m_TagString
+      value: useable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87138877b2dc23b4da67e880f44268ca, type: 3}
 --- !u!1 &1363010208
@@ -15400,7 +15405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692005955}
   - component: {fileID: 1692005954}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bedroom trigger
   m_TagString: bedroom
   m_Icon: {fileID: 0}
@@ -18120,7 +18125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2070232820}
   - component: {fileID: 2070232819}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: mainroom trigger
   m_TagString: mainroom
   m_Icon: {fileID: 0}
