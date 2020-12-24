@@ -14,6 +14,7 @@ public class WalkBy : MonoBehaviour
         if (!reset)
         {
             transform.position = startPos.transform.position;
+            GetComponent<Animator>().SetBool("walk", true);
             player.GetComponent<Heartbeat>().startSearching = true;
             player.GetComponent<AudioSource>().loop = true;
             reset = true;
@@ -23,6 +24,7 @@ public class WalkBy : MonoBehaviour
 
         if(transform.position == endPos.transform.position)
         {
+            GetComponent<Animator>().SetBool("walk", false);
             player.GetComponent<Heartbeat>().startSearching = false;
             player.GetComponent<AudioSource>().loop = false;
             gameObject.SetActive(false);

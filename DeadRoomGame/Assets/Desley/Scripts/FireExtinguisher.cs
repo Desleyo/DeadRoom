@@ -13,7 +13,7 @@ public class FireExtinguisher : MonoBehaviour
     public SteamVR_Action_Boolean Trigger;
     public GameObject[] hands;
     public GameObject fire;
-    public bool Grab;
+    public bool grab, done;
     public float distance = Mathf.Infinity;
 
     public bool switched;
@@ -32,16 +32,17 @@ public class FireExtinguisher : MonoBehaviour
         }
         else
         {
-            Grab = Trigger.state;
+            grab = Trigger.state;
             distance = Mathf.Infinity;
             foreach (GameObject hand in hands)
             {
                 distance = Vector3.Distance(transform.position, hand.transform.position);
-                if (distance <= .6 && Grab)
+                if (distance <= .6 && grab && !done)
                 {
                     //play particle
                     fire.SetActive(false);
                     audioSource.Play();
+                    done = true;
                 }
             }
         }
