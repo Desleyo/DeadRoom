@@ -12,8 +12,7 @@ TagManager:
   - Ground
   - useable
   - basement
-  - bedroom
-  - mainroom
+  - upstairs
   layers:
   - Default
   - TransparentFX

@@ -25,4 +25,16 @@ public class PlayerController : MonoBehaviour
             controller.Move(speed * Time.deltaTime * Vector3.ProjectOnPlane(direction, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "basement")
+        {
+            room = 0;
+        }
+        else if(collision.gameObject.tag == "upstairs")
+        {
+            room = 1;
+        }
+    }
 }

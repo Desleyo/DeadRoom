@@ -19321,7 +19321,7 @@ PrefabInstance:
     - target: {fileID: 4262210622334310923, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_TagString
-      value: Ground
+      value: basement
       objectReference: {fileID: 0}
     - target: {fileID: 5007954508143620119, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
@@ -19461,7 +19461,7 @@ PrefabInstance:
     - target: {fileID: 7286875413250601817, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: upstairs
       objectReference: {fileID: 0}
     - target: {fileID: 7286875413250601817, guid: 3b174f602b3a0584c9e22833aea621c7,
         type: 3}
