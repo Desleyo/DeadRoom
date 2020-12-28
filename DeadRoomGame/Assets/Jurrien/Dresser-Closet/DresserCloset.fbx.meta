@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 329eb9570f18d4b469ba10e80164e3ad
+guid: 0eb93e79a22e6d7429e1522bd24b0d27
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: No Name
-    second: {fileID: 2100000, guid: f348beb77bbb67542b1f1bc304c5e39e, type: 2}
+      name: Closet
+    second: {fileID: 2100000, guid: 65fc605cdd3b60847acb1a8ff126a84b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -50,7 +50,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
