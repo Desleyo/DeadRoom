@@ -22,7 +22,7 @@ public class UIInput : MonoBehaviour
         {
             Debug.Log("Cube was clicked");
         }
-        else if (e.target.name == "Button")
+        else if (e.target.tag == "Button")
         {
             Debug.Log("Button was clicked");
         }

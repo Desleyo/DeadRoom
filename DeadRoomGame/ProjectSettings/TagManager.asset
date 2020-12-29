@@ -11,6 +11,7 @@ TagManager:
   - Hand
   - Ground
   - useable
+  - Button
   layers:
   - Default
   - TransparentFX
