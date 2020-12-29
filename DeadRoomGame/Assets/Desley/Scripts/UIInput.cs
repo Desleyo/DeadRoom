@@ -12,8 +12,8 @@ public class UIInput : MonoBehaviour
 
     void Awake()
     {
-        laserPointer.PointerIn += PointerInside;
-        laserPointer.PointerOut += PointerOutside;
+        //laserPointer.PointerIn += PointerInside;
+        //laserPointer.PointerOut += PointerOutside;
         laserPointer.PointerClick += PointerClick;
     }
 
@@ -33,22 +33,6 @@ public class UIInput : MonoBehaviour
         {
             Debug.Log("Quit was clicked");
             quitButton.GetComponent<Button>().onClick.Invoke();
-        }
-    }
-
-    public void PointerInside(object sender, PointerEventArgs e)
-    {
-        if (e.target.tag == "Button")
-        {
-            Debug.Log("Button was entered");
-        }
-    }
-
-    public void PointerOutside(object sender, PointerEventArgs e)
-    {
-        if (e.target.tag == "Button")
-        {
-            Debug.Log("Button was exited");
         }
     }
 }
