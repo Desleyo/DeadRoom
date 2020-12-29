@@ -58,4 +58,9 @@ public class PlayerController : MonoBehaviour
             room = 1;
         }
     }
+
+    public void DestroyPlayer()
+    {
+        Destroy(gameObject);
+    }
 }

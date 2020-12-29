@@ -610,8 +610,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 309124385}
-        m_MethodName: LoadScene
+      - m_Target: {fileID: 1823800878}
+        m_MethodName: DestroyPlayer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -621,9 +621,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1823800878}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 309124385}
+        m_MethodName: LoadScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4644,12 +4644,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1823800876}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1823800878 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4425575127601150142, guid: db2d4656b24031c4bbe756d6610745d7,
+--- !u!114 &1823800878 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7,
     type: 3}
   m_PrefabInstance: {fileID: 1823800876}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ad0d4087f96e84da7c4b964c998954, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932587791
 GameObject:
   m_ObjectHideFlags: 0
