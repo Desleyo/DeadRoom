@@ -8,6 +8,7 @@ using Valve.VR.Extras;
 public class UIInput : MonoBehaviour
 {
     public SteamVR_LaserPointer laserPointer;
+    public GameObject startButton, settingsButton, quitButton;
 
     void Awake()
     {
@@ -18,9 +19,20 @@ public class UIInput : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.tag == "Button")
+        if (e.target.name == "Start")
         {
-            Debug.Log("Button was clicked");
+            Debug.Log("Start was clicked");
+            startButton.GetComponent<Button>().onClick.Invoke();
+        }
+        else if (e.target.name == "Settings")
+        {
+            Debug.Log("Settings was clicked");
+            settingsButton.GetComponent<Button>().onClick.Invoke();
+        }
+        else if (e.target.name == "Quit")
+        {
+            Debug.Log("Quit was clicked");
+            quitButton.GetComponent<Button>().onClick.Invoke();
         }
     }
 

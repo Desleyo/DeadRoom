@@ -2095,6 +2095,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laserPointer: {fileID: 1036256613}
+  startButton: {fileID: 330909987}
+  settingsButton: {fileID: 1125503205}
+  quitButton: {fileID: 1122018241}
 --- !u!114 &1036256613
 MonoBehaviour:
   m_ObjectHideFlags: 0
