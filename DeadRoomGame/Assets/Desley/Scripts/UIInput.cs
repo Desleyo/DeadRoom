@@ -18,11 +18,7 @@ public class UIInput : MonoBehaviour
 
     public void PointerClick(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
-        {
-            Debug.Log("Cube was clicked");
-        }
-        else if (e.target.tag == "Button")
+        if (e.target.tag == "Button")
         {
             Debug.Log("Button was clicked");
         }
@@ -30,11 +26,7 @@ public class UIInput : MonoBehaviour
 
     public void PointerInside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
-        {
-            Debug.Log("Cube was entered");
-        }
-        else if (e.target.name == "Button")
+        if (e.target.tag == "Button")
         {
             Debug.Log("Button was entered");
         }
@@ -42,11 +34,7 @@ public class UIInput : MonoBehaviour
 
     public void PointerOutside(object sender, PointerEventArgs e)
     {
-        if (e.target.name == "Cube")
-        {
-            Debug.Log("Cube was exited");
-        }
-        else if (e.target.name == "Button")
+        if (e.target.tag == "Button")
         {
             Debug.Log("Button was exited");
         }
