@@ -12,11 +12,12 @@ public class Attack : MonoBehaviour
     NavMeshAgent agent;
     public AudioSource preAttack, attack;
     public AudioClip[] attackSounds;
+    public GameObject canvas;
     public Image image;
     public Color alpha;
     public int randomizer, room;
     public bool attacked, canWalk, stairs, setTimer, attackStarted, fadeToBlack;
-    public float distance, fallbackTimer, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
+    public float fade, distance, fallbackTimer, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
 
     private void Start()
     {
@@ -76,8 +77,9 @@ public class Attack : MonoBehaviour
 
         if (fadeToBlack)
         {
+            canvas.SetActive(true);
             alpha = image.GetComponent<Image>().color;
-            alpha.a += .005f;
+            alpha.a += fade *Time.deltaTime;
             image.GetComponent<Image>().color = alpha;
             if (alpha.a >= 1f)
             {

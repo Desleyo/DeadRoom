@@ -9,7 +9,7 @@ public class FireExtinguisher : MonoBehaviour
     public Transform firePos;
     public GameObject extinguisher;
 
-    public AudioSource audioSource;
+    public AudioSource audioPlayer;
     public SteamVR_Action_Boolean Trigger;
     public GameObject[] hands;
     public GameObject fire;
@@ -41,7 +41,7 @@ public class FireExtinguisher : MonoBehaviour
                 {
                     //play particle
                     fire.SetActive(false);
-                    audioSource.Play();
+                    audioPlayer.Play();
                     done = true;
                 }
             }

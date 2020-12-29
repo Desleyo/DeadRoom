@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public SteamVR_Action_Vector2 input;
     public int room;
-    public float speed = 1;
+    public float speed = 1, fade;
     public bool fadedFromBlack;
+    public GameObject canvas;
     public Image image;
     public Color alpha;
 
@@ -29,10 +30,11 @@ public class PlayerController : MonoBehaviour
         if (!fadedFromBlack)
         {
             alpha = image.GetComponent<Image>().color;
-            alpha.a -= .005f;
+            alpha.a -= fade * Time.deltaTime;
             image.GetComponent<Image>().color = alpha;
             if (alpha.a <= 0)
             {
+                canvas.SetActive(false);
                 fadedFromBlack = true;
             }
         }
