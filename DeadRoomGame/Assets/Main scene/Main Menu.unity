@@ -4179,6 +4179,10 @@ PrefabInstance:
       propertyPath: checkPoint
       value: 
       objectReference: {fileID: 1188807447}
+    - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
+      propertyPath: fadedFromBlack
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1996746585, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: targets.Array.size
       value: 11
