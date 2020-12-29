@@ -83,6 +83,7 @@ public class Attack : MonoBehaviour
             image.GetComponent<Image>().color = alpha;
             if (alpha.a >= 1f)
             {
+                Destroy(playerPos.gameObject);
                 SceneManager.LoadScene(0);
             }
         }
