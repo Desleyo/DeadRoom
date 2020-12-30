@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
@@ -11,8 +12,8 @@ public class PlayerController : MonoBehaviour
     public SteamVR_Action_Vector2 input;
     public int room;
     public float speed = 1, fade;
-    public bool fadedFromBlack;
-    public GameObject canvas;
+    public bool fadedFromBlack, fadedToBlack;
+    public GameObject canvas, eventPlayer;
     public Image image;
     public Color alpha;
 
@@ -37,6 +38,18 @@ public class PlayerController : MonoBehaviour
             {
                 canvas.SetActive(false);
                 fadedFromBlack = true;
+            }
+        }
+        
+        if(!fadedToBlack)
+        {
+            canvas.SetActive(true);
+            alpha = image.GetComponent<Image>().color;
+            alpha.a += fade * Time.deltaTime;
+            image.GetComponent<Image>().color = alpha;
+            if (alpha.a >= 1)
+            {
+                eventPlayer.GetComponent<End>().ChangeScene();
             }
         }
 

@@ -77,15 +77,7 @@ public class Attack : MonoBehaviour
 
         if (fadeToBlack)
         {
-            canvas.SetActive(true);
-            alpha = image.GetComponent<Image>().color;
-            alpha.a += fade *Time.deltaTime;
-            image.GetComponent<Image>().color = alpha;
-            if (alpha.a >= 1f)
-            {
-                Destroy(playerPos.gameObject);
-                SceneManager.LoadScene(0);
-            }
+            playerPos.gameObject.GetComponent<PlayerController>().fadedToBlack = false;
         }
     }
 

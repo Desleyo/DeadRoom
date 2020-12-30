@@ -12,6 +12,7 @@ public class DeathEvent : MonoBehaviour
     {
         if (player.GetComponent<PlayerController>().room == 0)
         {
+            mainDoor.GetComponentInChildren<DoorOpen>().enabled = false;
             mainDoor.transform.eulerAngles = new Vector3(0, -90, 0);
             wendigoB.SetActive(true);
             wendigoB.GetComponent<Animator>().SetBool("stairWalk", true);
@@ -21,6 +22,7 @@ public class DeathEvent : MonoBehaviour
         }
         else if(player.GetComponent<PlayerController>().room == 1)
         {
+            mainDoor.GetComponentInChildren<DoorOpen>().enabled = false;
             mainDoor.transform.eulerAngles = new Vector3(0, -90, 0);
             wendigoM.SetActive(true);
             wendigoM.GetComponent<Animator>().SetBool("walk", true);
@@ -28,6 +30,7 @@ public class DeathEvent : MonoBehaviour
         }
         else if (player.GetComponent<PlayerController>().room == 2)
         {
+            mainDoor.GetComponentInChildren<DoorOpen>().enabled = false;
             mainDoor.transform.eulerAngles = new Vector3(0, -90, 0);
             wendigoM.transform.eulerAngles = new Vector3(0, 180, 0);
             wendigoM.SetActive(true);

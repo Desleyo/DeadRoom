@@ -3910,8 +3910,10 @@ MonoBehaviour:
   key: {fileID: 0}
   crowbar: {fileID: 1222342246}
   bedroomTP: {fileID: 106518205}
+  player: {fileID: 0}
   timer: Infinity
   doorBroken: 0
+  frontDoor: 0
   angle: -90
 --- !u!114 &341244113
 MonoBehaviour:
@@ -10889,7 +10891,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014744258}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f512821e23aa97449eb9e1d9edf08dd, type: 3}
   m_Name: 
@@ -10897,8 +10899,10 @@ MonoBehaviour:
   key: {fileID: 1446780109}
   crowbar: {fileID: 0}
   bedroomTP: {fileID: 0}
+  player: {fileID: 1018605756}
   timer: Infinity
   doorBroken: 0
+  frontDoor: 1
   angle: -90
 --- !u!65 &1014744261
 BoxCollider:
@@ -16325,12 +16329,24 @@ PrefabInstance:
       objectReference: {fileID: 1610713483}
     - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: fade
-      value: 0.3
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1184046553}
+    - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
+      propertyPath: fadedToBlack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
+      propertyPath: alpha.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1996746581, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
+      propertyPath: eventPlayer
+      value: 
+      objectReference: {fileID: 1540264465}
     - target: {fileID: 1996746585, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
       propertyPath: targets.Array.size
       value: 11
@@ -16760,6 +16776,7 @@ GameObject:
   - component: {fileID: 1540264467}
   - component: {fileID: 1540264466}
   - component: {fileID: 1540264468}
+  - component: {fileID: 1540264469}
   m_Layer: 0
   m_Name: EventPlayer
   m_TagString: Untagged
@@ -16832,6 +16849,19 @@ MonoBehaviour:
   mainDoor: {fileID: 678450708}
   wendigoB: {fileID: 449154796}
   wendigoM: {fileID: 1236158831}
+--- !u!114 &1540264469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540264465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681a8631785dd734893d0bd4b2e0a758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1018605756}
 --- !u!1 &1550248483
 GameObject:
   m_ObjectHideFlags: 0
@@ -17006,7 +17036,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1584593437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19360,8 +19390,10 @@ MonoBehaviour:
   key: {fileID: 2114560724}
   crowbar: {fileID: 0}
   bedroomTP: {fileID: 0}
+  player: {fileID: 0}
   timer: Infinity
   doorBroken: 0
+  frontDoor: 0
   angle: 180
 --- !u!65 &1863502336
 BoxCollider:

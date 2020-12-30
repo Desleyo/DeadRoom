@@ -13,8 +13,10 @@ public class DoorOpen : MonoBehaviour
     [Header("not required when using key on door")]
     public GameObject bedroomTP;
 
+    public GameObject player;
+
     public float timer = Mathf.Infinity;
-    public bool doorBroken;
+    public bool doorBroken, frontDoor;
     public int angle;
 
     public void DoorFuseBox()
@@ -47,6 +49,11 @@ public class DoorOpen : MonoBehaviour
             crowbar.GetComponentInChildren<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             timer = Mathf.Infinity;
             doorBroken = false;
+        }
+
+        if(GetComponentInParent<Transform>().rotation.y < 0 && frontDoor)
+        {
+            player.GetComponent<PlayerController>().fadedToBlack = false;
         }
     }
 }
