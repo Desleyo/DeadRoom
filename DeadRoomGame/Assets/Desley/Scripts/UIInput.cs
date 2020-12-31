@@ -23,6 +23,10 @@ public class UIInput : MonoBehaviour
         {
             e.target.GetComponent<Button>().onClick.Invoke();
         }
+        else if(e.target.tag == "Slider")
+        {
+            print("kerstnut");
+        }
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
