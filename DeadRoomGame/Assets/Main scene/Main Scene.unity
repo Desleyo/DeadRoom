@@ -8248,7 +8248,7 @@ MonoBehaviour:
   endPosition: {fileID: 1889092875}
   linearMapping: {fileID: 751341305}
   repositionGameObject: 1
-  maintainMomemntum: 1
+  maintainMomemntum: 0
   momemtumDampenRate: 5
 --- !u!114 &751341307
 MonoBehaviour:
@@ -8302,8 +8302,8 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
---- !u!65 &751341308
-BoxCollider:
+--- !u!135 &751341308
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -8313,8 +8313,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46853417, y: 0.28034353, z: 0.0423584}
-  m_Center: {x: -0.0000551641, y: 0.015203506, z: 0.16109467}
+  m_Radius: 0.062282562
+  m_Center: {x: 0.01000309, y: 0.01419735, z: 0.1519928}
 --- !u!54 &751341309
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8330,7 +8330,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &751341310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9105,9 +9105,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startPosition: {fileID: 978491091}
   endPosition: {fileID: 1883764373}
-  linearMapping: {fileID: 751341305}
+  linearMapping: {fileID: 848586838}
   repositionGameObject: 1
-  maintainMomemntum: 1
+  maintainMomemntum: 0
   momemtumDampenRate: 5
 --- !u!114 &848586840
 MonoBehaviour:
@@ -9161,8 +9161,8 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
---- !u!65 &848586841
-BoxCollider:
+--- !u!135 &848586841
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9172,8 +9172,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.46712527, y: 0.28034353, z: 0.044376373}
-  m_Center: {x: 0.00063225627, y: 0.015213624, z: 0.16143227}
+  m_Radius: 0.06217575
+  m_Center: {x: -0.0124435425, y: 0.015987396, z: 0.1520629}
 --- !u!54 &848586842
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9189,7 +9189,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &848586843
 BoxCollider:
   m_ObjectHideFlags: 0

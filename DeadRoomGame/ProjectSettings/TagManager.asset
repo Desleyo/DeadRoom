@@ -12,6 +12,7 @@ TagManager:
   - Ground
   - useable
   - Button
+  - Slider
   layers:
   - Default
   - TransparentFX

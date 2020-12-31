@@ -55,7 +55,7 @@ public class Attack : MonoBehaviour
         {
             wendigoD.SetActive(true);
             wendigoD.GetComponent<Animator>().SetBool("walk", true);
-            wendigoD.GetComponent<Attack>().fallbackTimer = 3f;
+            wendigoD.GetComponent<Attack>().fallbackTimer = 4f;
             gameObject.SetActive(false);
         }
 
