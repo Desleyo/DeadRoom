@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 446383370}
   m_Layer: 5
   m_Name: Voice
-  m_TagString: Slider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -793,7 +793,7 @@ BoxCollider:
   m_GameObject: {fileID: 446383367}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 157.0656, y: 12.607089, z: 6.1002507}
   m_Center: {x: 0.19034332, y: -0.00007928372, z: -1.0426683}
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 566374682}
   m_Layer: 5
   m_Name: master
-  m_TagString: Slider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1221,7 +1221,7 @@ BoxCollider:
   m_GameObject: {fileID: 566374679}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 156.9767, y: 13.121539, z: 5.8975368}
   m_Center: {x: 0.24466087, y: -0.19593383, z: -1.205532}
@@ -1620,7 +1620,7 @@ GameObject:
   - component: {fileID: 676973914}
   m_Layer: 5
   m_Name: Ambiant
-  m_TagString: Slider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1718,7 +1718,7 @@ BoxCollider:
   m_GameObject: {fileID: 676973911}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 157.01616, y: 12.607247, z: 5.9164057}
   m_Center: {x: 0.25024444, y: -0.3869146, z: -1.2572157}
@@ -3049,9 +3049,10 @@ GameObject:
   - component: {fileID: 1183496599}
   - component: {fileID: 1183496600}
   - component: {fileID: 1183496601}
+  - component: {fileID: 1183496602}
   m_Layer: 5
   m_Name: Handle
-  m_TagString: Untagged
+  m_TagString: Slider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3112,6 +3113,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!65 &1183496602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183496598}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.215425, y: 17.250711, z: 9.677208}
+  m_Center: {x: 0.3230665, y: -0.23196733, z: -0.14851215}
 --- !u!1 &1188807446
 GameObject:
   m_ObjectHideFlags: 0
@@ -3968,9 +3982,10 @@ GameObject:
   - component: {fileID: 1421662873}
   - component: {fileID: 1421662875}
   - component: {fileID: 1421662874}
+  - component: {fileID: 1421662876}
   m_Layer: 5
   m_Name: Handle
-  m_TagString: Untagged
+  m_TagString: Slider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4031,6 +4046,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421662872}
   m_CullTransparentMesh: 0
+--- !u!65 &1421662876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421662872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.174706, y: 16.336714, z: 9.634744}
+  m_Center: {x: 0.3465879, y: 0, z: -0.109531105}
 --- !u!1 &1435783876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4078,9 +4106,10 @@ GameObject:
   - component: {fileID: 1445067393}
   - component: {fileID: 1445067395}
   - component: {fileID: 1445067394}
+  - component: {fileID: 1445067396}
   m_Layer: 5
   m_Name: Handle
-  m_TagString: Untagged
+  m_TagString: Slider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4141,6 +4170,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1445067392}
   m_CullTransparentMesh: 0
+--- !u!65 &1445067396
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1445067392}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.175005, y: 16.403362, z: 9.543096}
+  m_Center: {x: 0.3451477, y: -0.00008240514, z: -0.15402146}
 --- !u!1001 &1461565395
 PrefabInstance:
   m_ObjectHideFlags: 0
