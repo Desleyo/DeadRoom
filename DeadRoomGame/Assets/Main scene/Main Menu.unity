@@ -692,6 +692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 446383369}
   - component: {fileID: 446383368}
+  - component: {fileID: 446383370}
   m_Layer: 5
   m_Name: Voice
   m_TagString: Slider
@@ -783,6 +784,19 @@ RectTransform:
   m_AnchoredPosition: {x: 300.625, y: -181.5}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &446383370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446383367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 157.0656, y: 12.607089, z: 6.1002507}
+  m_Center: {x: 0.19034332, y: -0.00007928372, z: -1.0426683}
 --- !u!1 &462479840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,6 +1120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 566374680}
   - component: {fileID: 566374681}
+  - component: {fileID: 566374682}
   m_Layer: 5
   m_Name: master
   m_TagString: Slider
@@ -1197,6 +1212,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &566374682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566374679}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 156.9767, y: 13.121539, z: 5.8975368}
+  m_Center: {x: 0.24466087, y: -0.19593383, z: -1.205532}
 --- !u!1 &567068199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676973912}
   - component: {fileID: 676973913}
+  - component: {fileID: 676973914}
   m_Layer: 5
   m_Name: Ambiant
   m_TagString: Slider
@@ -1680,6 +1709,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &676973914
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676973911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 157.01616, y: 12.607247, z: 5.9164057}
+  m_Center: {x: 0.25024444, y: -0.3869146, z: -1.2572157}
 --- !u!1 &704467326
 GameObject:
   m_ObjectHideFlags: 0
