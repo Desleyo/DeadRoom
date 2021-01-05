@@ -6,7 +6,7 @@ public class DeerTotem : MonoBehaviour
 {
     public GameObject altar, deerTotem, mensTotem, skull, timer;
     public bool deerTotemDone, addedTime;
-    public float addNum;
+    public int addNum;
     public AudioClip sound;
     public AudioSource source;
 
