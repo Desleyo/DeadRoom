@@ -7,17 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class Attack : MonoBehaviour
 {
-    public GameObject wendigoD;
+    public GameObject wendigoD, eventPlayer;
     public Transform playerPos, walkPoint, spawnPoint;
     NavMeshAgent agent;
     public AudioSource preAttack, attack;
     public AudioClip[] attackSounds;
-    public GameObject canvas;
-    public Image image;
-    public Color alpha;
     public int randomizer, room;
-    public bool attacked, canWalk, stairs, setTimer, attackStarted, fadeToBlack;
-    public float fade, distance, fallbackTimer, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
+    public bool attacked, canWalk, stairs, setTimer, attackStarted;
+    public float distance, fallbackTimer, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
 
     private void Start()
     {
@@ -70,15 +67,10 @@ public class Attack : MonoBehaviour
             attackSoundTimer = Mathf.Infinity;
             attack.clip = attackSounds[randomizer];
             attack.Play();
-            fadeToBlack = true;
+            eventPlayer.GetComponent<End>().SetTimer();
         }
 
         attackSoundTimer -= Time.deltaTime;
-
-        if (fadeToBlack)
-        {
-            playerPos.gameObject.GetComponent<PlayerController>().fadedToBlack = false;
-        }
     }
 
     void startAttack()

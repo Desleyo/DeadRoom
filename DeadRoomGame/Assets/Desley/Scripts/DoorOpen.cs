@@ -13,7 +13,7 @@ public class DoorOpen : MonoBehaviour
     [Header("not required when using key on door")]
     public GameObject bedroomTP;
 
-    public GameObject player;
+    public GameObject eventPlayer;
 
     public float timer = Mathf.Infinity;
     public bool doorBroken, frontDoor;
@@ -53,7 +53,8 @@ public class DoorOpen : MonoBehaviour
 
         if(GetComponentInParent<Transform>().rotation.y < 0 && frontDoor)
         {
-            player.GetComponent<PlayerController>().fadedToBlack = false;
+            eventPlayer.GetComponent<End>().SetTimer();
+            frontDoor = false;
         }
     }
 }

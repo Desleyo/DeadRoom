@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Crowbar : MonoBehaviour
 {
-    public GameObject crowbar, door;
+    public GameObject crowbar, point;
     public float distance;
     public bool useable = true;
 
     // Update is called once per frame
     void Update()
     {
-        distance = Vector3.Distance(transform.position, door.transform.position);
+        distance = Vector3.Distance(transform.position, point.transform.position);
         if(distance <= .75f && useable)
         {
             //play sound

@@ -4,13 +4,16 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 
-public class DropPainting : MonoBehaviour
+public class Interaction : MonoBehaviour
 {
     public AudioSource audioSource;
     public SteamVR_Action_Boolean Trigger;
     public GameObject[] hands;
-    public bool Grab;
+    public bool Grab, painting;
     public float distance = Mathf.Infinity;
+
+    [Header("not required when interacting with painting")]
+    public GameObject gunWithFlag;
 
     // Update is called once per frame
     void Update()
@@ -21,10 +24,16 @@ public class DropPainting : MonoBehaviour
         foreach (GameObject hand in hands)
         {
             distance = Vector3.Distance(transform.position, hand.transform.position);
-            if(distance <= .3 && Grab)
+            if(distance <= .3 && Grab && painting)
             {
                 GetComponent<Rigidbody>().isKinematic = false;
                 GetComponent<Rigidbody>().useGravity = true;
+                audioSource.Play();
+            }
+            else if (distance <= .3 && Grab && !painting)
+            {
+                gunWithFlag.SetActive(true);
+                gameObject.SetActive(false);
                 audioSource.Play();
             }
         }

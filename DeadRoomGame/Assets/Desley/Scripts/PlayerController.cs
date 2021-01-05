@@ -11,48 +11,18 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public SteamVR_Action_Vector2 input;
     public int room;
-    public float speed = 1, fade;
-    public bool fadedFromBlack, fadedToBlack;
-    public GameObject canvas, eventPlayer;
-    public Image image;
-    public Color alpha;
+    public float speed = 1;
 
     public Transform checkPoint;
 
     void Start()
     {
-        controller = gameObject.GetComponent<CharacterController>();
-        alpha.a = 1f;
-        
+        controller = gameObject.GetComponent<CharacterController>();  
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!fadedFromBlack)
-        {
-            alpha = image.GetComponent<Image>().color;
-            alpha.a -= fade * Time.deltaTime;
-            image.GetComponent<Image>().color = alpha;
-            if (alpha.a <= 0)
-            {
-                canvas.SetActive(false);
-                fadedFromBlack = true;
-            }
-        }
-        
-        if(!fadedToBlack)
-        {
-            canvas.SetActive(true);
-            alpha = image.GetComponent<Image>().color;
-            alpha.a += fade * Time.deltaTime;
-            image.GetComponent<Image>().color = alpha;
-            if (alpha.a >= 1)
-            {
-                eventPlayer.GetComponent<End>().ChangeScene();
-            }
-        }
-
         if (input.axis.magnitude > .1f)
         {
             Vector3 direction = Player.instance.hmdTransform.TransformDirection(new Vector3(input.axis.x, 0, input.axis.y));
