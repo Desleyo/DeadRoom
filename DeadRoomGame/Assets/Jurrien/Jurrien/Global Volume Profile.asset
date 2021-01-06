@@ -93,7 +93,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   temperature:
     m_OverrideState: 1
-    m_Value: -9.3
+    m_Value: -15
     min: -100
     max: 100
   tint:
@@ -131,12 +131,12 @@ MonoBehaviour:
     showEyeDropper: 1
   hueShift:
     m_OverrideState: 1
-    m_Value: 9
+    m_Value: 4
     min: -180
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: -38
+    m_Value: -18
     min: -100
     max: 100
 --- !u!114 &5661709305776755841
