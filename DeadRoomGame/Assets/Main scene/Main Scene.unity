@@ -3478,7 +3478,7 @@ GameObject:
   - component: {fileID: 287013993}
   m_Layer: 0
   m_Name: blue
-  m_TagString: Color3
+  m_TagString: Color2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5710,7 +5710,7 @@ GameObject:
   - component: {fileID: 486341490}
   m_Layer: 0
   m_Name: purple
-  m_TagString: Color2
+  m_TagString: Color3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9798,7 +9798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &845755694
 Transform:
   m_ObjectHideFlags: 0
