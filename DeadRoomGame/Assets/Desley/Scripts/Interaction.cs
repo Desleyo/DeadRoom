@@ -32,9 +32,9 @@ public class Interaction : MonoBehaviour
             }
             else if (distance <= .3 && Grab && !painting)
             {
+                audioSource.Play();
                 gunWithFlag.SetActive(true);
                 gameObject.SetActive(false);
-                audioSource.Play();
             }
         }
     }
