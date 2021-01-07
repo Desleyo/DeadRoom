@@ -13,7 +13,7 @@ public class DeerTotem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+         timer = GameObject.FindWithTag("timer");
     }
 
     // Update is called once per frame
@@ -38,7 +38,7 @@ public class DeerTotem : MonoBehaviour
     {
         if(collision.gameObject.name == "Standard")
         {
-            deerTotem.transform.localPosition = new Vector3(0, 0, 0);
+            deerTotem.transform.localPosition = new Vector3(20.633f, -22.57f, -32.511f);
             deerTotem.transform.rotation = Quaternion.identity;
             deerTotem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             deerTotemDone = true;

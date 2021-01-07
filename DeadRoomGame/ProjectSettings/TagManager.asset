@@ -13,6 +13,7 @@ TagManager:
   - useable
   - Button
   - Slider
+  - timer
   layers:
   - Default
   - TransparentFX
