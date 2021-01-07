@@ -28,6 +28,7 @@ public class Interaction : MonoBehaviour
             {
                 GetComponent<Rigidbody>().isKinematic = false;
                 GetComponent<Rigidbody>().useGravity = true;
+                GetComponent<Outline>().enabled = false;
                 audioSource.Play();
             }
             else if (distance <= .3 && Grab && !painting)
