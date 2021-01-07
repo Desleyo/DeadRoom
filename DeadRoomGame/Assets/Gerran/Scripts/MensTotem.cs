@@ -26,7 +26,7 @@ public class MensTotem : MonoBehaviour
             if (deerTotem.GetComponent<DeerTotem>().deerTotemDone == true)
             {
                 mensTotem.transform.localPosition = new Vector3(20.637f, -22.732f, -32.698f);
-                mensTotem.transform.rotation = Quaternion.identity;
+                mensTotem.transform.localRotation = Quaternion.Euler(0, 180, 0);
                 mensTotem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 mensTotemDone = true;
             }
