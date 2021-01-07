@@ -20,11 +20,11 @@ public class Skull : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "DeerTotem")
+        if (collision.gameObject.name == "Deer")
         {
             if (deerTotem.GetComponent<DeerTotem>().deerTotemDone == true)
             {
-                skull.transform.position = new Vector3(deerTotem.transform.position.x, deerTotem.transform.position.y + .5f, deerTotem.transform.position.z);
+                skull.transform.localPosition = new Vector3(0, 0.21f, 0.01f);
                 skull.transform.rotation = Quaternion.identity;
                 skull.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 skullDone = true;
@@ -33,7 +33,7 @@ public class Skull : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "DeerTotem")
+        if (collision.gameObject.name == "Deer")
         {
             skullDone = false;
         }

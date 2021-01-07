@@ -21,11 +21,11 @@ public class MensTotem : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "DeerTotem")
+        if (collision.gameObject.name == "Deer")
         {
             if (deerTotem.GetComponent<DeerTotem>().deerTotemDone == true)
             {
-                mensTotem.transform.position = new Vector3(deerTotem.transform.position.x - .5f, deerTotem.transform.position.y, deerTotem.transform.position.z);
+                mensTotem.transform.localPosition = new Vector3(0, 0.07f, 0.1f);
                 mensTotem.transform.rotation = Quaternion.identity;
                 mensTotem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 mensTotemDone = true;
@@ -34,7 +34,7 @@ public class MensTotem : MonoBehaviour
     }
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "DeerTotem")
+        if (collision.gameObject.name == "Deer")
         {
             mensTotemDone = false;
         }

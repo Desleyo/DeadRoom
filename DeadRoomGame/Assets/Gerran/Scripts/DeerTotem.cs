@@ -36,9 +36,9 @@ public class DeerTotem : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.name == "altar")
+        if(collision.gameObject.name == "Standard")
         {
-            deerTotem.transform.position = new Vector3(altar.transform.position.x, altar.transform.position.y + .5f, altar.transform.position.z);
+            deerTotem.transform.localPosition = new Vector3(0, 0, 0);
             deerTotem.transform.rotation = Quaternion.identity;
             deerTotem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             deerTotemDone = true;
@@ -47,7 +47,7 @@ public class DeerTotem : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if(collision.gameObject.name == "altar")
+        if(collision.gameObject.name == "Standard")
         {
             deerTotemDone = (false);
         }
