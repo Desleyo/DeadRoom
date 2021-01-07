@@ -31,11 +31,4 @@ public class Skull : MonoBehaviour
             }
         }
     }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.name == "Deer")
-        {
-            skullDone = false;
-        }
-    }
 }
