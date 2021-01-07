@@ -45,14 +45,6 @@ public class DeerTotem : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if(collision.gameObject.name == "Standard")
-        {
-            deerTotemDone = (false);
-        }
-    }
-
     public void AddTime()
     {
         timer.GetComponent<Timer>().min += addNum;

@@ -19881,12 +19881,12 @@ PrefabInstance:
     - target: {fileID: 7836693497252304783, guid: e97b9691de9578645845a5f5da20dcf7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.07
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 7836693497252304783, guid: e97b9691de9578645845a5f5da20dcf7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.417
+      value: -0.465
       objectReference: {fileID: 0}
     - target: {fileID: 7836693497252304783, guid: e97b9691de9578645845a5f5da20dcf7,
         type: 3}
@@ -19901,7 +19901,7 @@ PrefabInstance:
     - target: {fileID: 7888331589065449327, guid: e97b9691de9578645845a5f5da20dcf7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5351
+      value: 0.763
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e97b9691de9578645845a5f5da20dcf7, type: 3}
@@ -23917,9 +23917,9 @@ MonoBehaviour:
   deerTotem: {fileID: 1967335654}
   mensTotem: {fileID: 1915607027}
   skull: {fileID: 1110177533}
-  timer: {fileID: 67193490}
+  timer: {fileID: 2101420112}
   deerTotemDone: 0
-  addedTime: 0
+  addedTime: 1
   addNum: 2
   sound: {fileID: 8300000, guid: 5a1476c330f081c49a993e73da39cff5, type: 3}
   source: {fileID: 1967335656}
