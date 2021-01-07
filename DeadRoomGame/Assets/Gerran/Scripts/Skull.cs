@@ -24,7 +24,7 @@ public class Skull : MonoBehaviour
         {
             if (deerTotem.GetComponent<DeerTotem>().deerTotemDone == true)
             {
-                skull.transform.localPosition = new Vector3(0, 0.21f, 0.01f);
+                skull.transform.localPosition = new Vector3(20.6263f, -22.1767f, -32.566f);
                 skull.transform.rotation = Quaternion.identity;
                 skull.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
                 skullDone = true;
