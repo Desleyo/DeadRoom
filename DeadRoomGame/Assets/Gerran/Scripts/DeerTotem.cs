@@ -39,7 +39,7 @@ public class DeerTotem : MonoBehaviour
         if(collision.gameObject.name == "Standard")
         {
             deerTotem.transform.localPosition = new Vector3(20.633f, -22.57f, -32.511f);
-            deerTotem.transform.rotation = Quaternion.identity;
+            deerTotem.transform.localRotation = Quaternion.Euler(0, 180, 0);
             deerTotem.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
             deerTotemDone = true;
         }
