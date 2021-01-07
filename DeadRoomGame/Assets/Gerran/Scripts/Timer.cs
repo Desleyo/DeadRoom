@@ -40,6 +40,6 @@ public class Timer : MonoBehaviour
         }
 
         secText.text = sec.ToString("F0");
-        minText.text = min.ToString(min + ":");
+        minText.text = min.ToString("G2") + ":";
     }
 }
