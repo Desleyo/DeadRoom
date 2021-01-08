@@ -12,9 +12,9 @@ public class Attack : MonoBehaviour
     NavMeshAgent agent;
     public AudioSource preAttack, attack;
     public AudioClip[] attackSounds;
-    public int randomizer, room;
-    public bool attacked, canWalk, stairs, setTimer, attackStarted;
-    public float distance, fallbackTimer, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
+    public int randomizer, room, pathfindWarning;
+    public bool attacked, canWalk, stairs, setTimer, attackStarted, playerFound;
+    public float distance, lastDistance = Mathf.Infinity, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
 
     private void Start()
     {
@@ -24,19 +24,32 @@ public class Attack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(canWalk)
+        if (pathfindWarning == 3 && !playerFound)
+        {
+            FindPlayer();
+            canWalk = false;
+        }
+
+        if (canWalk)
         {
             agent.SetDestination(playerPos.position);
             distance = Vector3.Distance(transform.position, playerPos.position);
-            fallbackTimer -= Time.deltaTime;
 
-            if (distance <= agent.stoppingDistance && !attackStarted)
+            if(distance <= agent.stoppingDistance && !attackStarted)
             {
                 startAttack();
                 attackStarted = true;
             }
+            else if(distance < lastDistance)
+            {
+                lastDistance = distance;
+            }
+            else if(distance == lastDistance && !attackStarted)
+            {
+                pathfindWarning += 1;
+            }
         }
-        else if(!stairs)
+        else if(!stairs && pathfindWarning != 3)
         {
             walkTowards();
         }
@@ -46,20 +59,13 @@ public class Attack : MonoBehaviour
         if (walkTimer <= 0 && !stairs)
         {
             walkTimer = Mathf.Infinity;
-            GetComponent<NavMeshAgent>().enabled = false;
+            agent.enabled = false;
         }
         else if(walkTimer <= 0 && stairs)
         {
             wendigoD.SetActive(true);
             wendigoD.GetComponent<Animator>().SetBool("walk", true);
-            wendigoD.GetComponent<Attack>().fallbackTimer = 4f;
             gameObject.SetActive(false);
-        }
-
-        if(fallbackTimer <= 0 && !attacked)
-        {
-            fallbackTimer = Mathf.Infinity;
-            agent.stoppingDistance = 2.5f;
         }
 
         if(attackSoundTimer <= 0)
@@ -95,10 +101,9 @@ public class Attack : MonoBehaviour
             float pointDistance = Vector3.Distance(transform.position, walkPoint.position);
             if (pointDistance <= .1f)
             {
-                GetComponent<NavMeshAgent>().enabled = true;
+                agent.enabled = true;
                 walkPoint.gameObject.SetActive(false);
                 canWalk = true;
-                fallbackTimer = 2f;
             }
         }
         else if(room == 1)
@@ -107,7 +112,7 @@ public class Attack : MonoBehaviour
             float pointDistance = Vector3.Distance(transform.position, spawnPoint.position);
             if (pointDistance <= .1f)
             {
-                GetComponent<NavMeshAgent>().enabled = true;
+                agent.enabled = true;
                 spawnPoint.gameObject.SetActive(false);
                 canWalk = true;
             }
@@ -117,6 +122,29 @@ public class Attack : MonoBehaviour
         {
             walkTimer = 1f;
             setTimer = true;
+        }
+    }
+
+    void FindPlayer()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+        float pointDistance = Vector3.Distance(transform.position, playerPos.position);
+        Debug.Log(pointDistance);
+        if(pointDistance <= agent.stoppingDistance)
+        {
+            startAttack();
+            playerFound = true;
+            attackStarted = true;
+        }
+        else if(pointDistance < lastDistance)
+        {
+            lastDistance = pointDistance;
+        }
+        else if(pointDistance >= lastDistance)
+        {
+            startAttack();
+            playerFound = true;
+            attackStarted = true;
         }
     }
 }
