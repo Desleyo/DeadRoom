@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
                 }
             }
             gameObject.GetComponent<MeshRenderer>().enabled = true;
-            gameObject.GetComponent<SphereCollider>().enabled = true;
+            gameObject.GetComponent<Collider>().enabled = true;
             item = null;
             itemRigidbody = null;
             return;
