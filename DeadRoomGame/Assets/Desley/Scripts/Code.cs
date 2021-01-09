@@ -8,8 +8,9 @@ using Valve.VR.InteractionSystem;
 public class Code : MonoBehaviour
 {
     public string code, clear;
+    public int charToAdd = -1;
 
-    int charToAdd = -1, characters;
+    int characters;
     bool cleared;
     float clearTimer;
 
