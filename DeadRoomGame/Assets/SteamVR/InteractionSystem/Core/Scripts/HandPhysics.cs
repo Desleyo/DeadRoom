@@ -37,7 +37,7 @@ namespace Valve.VR.InteractionSystem
         {
             hand = GetComponent<Hand>();
             //spawn hand collider and link it to us
-            
+
             handCollider = ((GameObject)Instantiate(handColliderPrefab.gameObject)).GetComponent<HandCollider>();
             Vector3 localPosition = handCollider.transform.localPosition;
             Quaternion localRotation = handCollider.transform.localRotation;
@@ -100,13 +100,7 @@ namespace Valve.VR.InteractionSystem
                 // wait for area to become clear before reenabling collisions
                 if (!collisionsEnabled)
                 {
-                    clearanceBuffer[0] = null;
-                    Physics.OverlapSphereNonAlloc(hand.objectAttachmentPoint.position, collisionReenableClearanceRadius, clearanceBuffer);
-                    // if we don't find anything in the vicinity, reenable collisions!
-                    if (clearanceBuffer[0] == null)
-                    {
-                        collisionsEnabled = true;
-                    }
+                    collisionsEnabled = true;
                 }
             }
 
@@ -134,10 +128,13 @@ namespace Valve.VR.InteractionSystem
 
 
             //bypass physics when game paused
+
+            /*
             if (Time.timeScale == 0)
             {
                 handCollider.TeleportTo(targetPosition, targetRotation);
             }
+            */
         }
 
         Transform wrist;
@@ -154,11 +151,11 @@ namespace Valve.VR.InteractionSystem
 
             // set finger tip positions in wrist space
 
-            for(int finger = 0; finger < 5; finger++)
+            for (int finger = 0; finger < 5; finger++)
             {
                 int tip = SteamVR_Skeleton_JointIndexes.GetBoneForFingerTip(finger);
                 int bone = tip;
-                for(int i = 0; i < handCollider.fingerColliders[finger].Length; i++)
+                for (int i = 0; i < handCollider.fingerColliders[finger].Length; i++)
                 {
                     bone = tip - 1 - i; // start at distal and go down
                     if (handCollider.fingerColliders[finger][i] != null)
@@ -214,7 +211,7 @@ namespace Valve.VR.InteractionSystem
 
         Vector3 ProcessPos(int boneIndex, Vector3 pos)
         {
-            if(hand.skeleton.mirroring != SteamVR_Behaviour_Skeleton.MirrorType.None)
+            if (hand.skeleton.mirroring != SteamVR_Behaviour_Skeleton.MirrorType.None)
             {
                 return SteamVR_Behaviour_Skeleton.MirrorPosition(boneIndex, pos);
             }
