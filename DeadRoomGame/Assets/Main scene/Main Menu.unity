@@ -6314,6 +6314,18 @@ PrefabInstance:
       propertyPath: grabGripAction.actionPath
       value: /actions/default/in/GrabPinch
       objectReference: {fileID: 0}
+    - target: {fileID: 4425575127607159362, guid: db2d4656b24031c4bbe756d6610745d7,
+        type: 3}
+      propertyPath: renderModelPrefab
+      value: 
+      objectReference: {fileID: 1000012617731570, guid: 820f83596a57da048b665ab08a6f7210,
+        type: 3}
+    - target: {fileID: 4425575127607372508, guid: db2d4656b24031c4bbe756d6610745d7,
+        type: 3}
+      propertyPath: renderModelPrefab
+      value: 
+      objectReference: {fileID: 1000011547835092, guid: a325160a4ba4d6840a1e6013e814b40d,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 1996746584, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}
     - {fileID: 1996746585, guid: db2d4656b24031c4bbe756d6610745d7, type: 3}

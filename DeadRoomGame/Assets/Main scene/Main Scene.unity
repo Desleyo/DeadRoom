@@ -4466,11 +4466,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f29fb4c09769754aa3730ab357bd60c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charToAdd: -1
-  characters: 0
   code: 5923
   clear: 
-  cleared: 0
+  charToAdd: -1
   key: {fileID: 1121674910}
 --- !u!1001 &351408860
 PrefabInstance:
@@ -9665,6 +9663,10 @@ PrefabInstance:
     - target: {fileID: 475244, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.74809074
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445746, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
+      propertyPath: traceLayerMask.m_Bits
+      value: 567
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
