@@ -8995,7 +8995,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 0
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9010,7 +9010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 9
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9025,7 +9025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 8
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9040,7 +9040,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 7
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9055,7 +9055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 6
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9070,7 +9070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 5
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9085,7 +9085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 4
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9100,7 +9100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 3
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9115,7 +9115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 2
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!114 &622605319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9130,7 +9130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressDistance: 0.003
   number: 1
-  canvas: {fileID: 0}
+  canvas: {fileID: 332907974}
 --- !u!1 &623951856
 GameObject:
   m_ObjectHideFlags: 0
