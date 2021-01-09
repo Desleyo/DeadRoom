@@ -25,8 +25,6 @@ public class Inventory : MonoBehaviour
 
         if(detaching)
         {
-            gameObject.GetComponent<MeshRenderer>().enabled = true;
-            gameObject.GetComponent<SphereCollider>().enabled = true;
             item.transform.position = hand.transform.position;
             itemRigidbody.constraints = RigidbodyConstraints.FreezeAll;
             item.GetComponent<Collider>().enabled = true;
@@ -42,6 +40,8 @@ public class Inventory : MonoBehaviour
                     item.GetComponent<Key>().useable = true;
                 }
             }
+            gameObject.GetComponent<MeshRenderer>().enabled = true;
+            gameObject.GetComponent<SphereCollider>().enabled = true;
             item = null;
             itemRigidbody = null;
             return;
