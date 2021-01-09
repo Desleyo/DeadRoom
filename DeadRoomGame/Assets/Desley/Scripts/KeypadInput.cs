@@ -33,7 +33,7 @@ public class KeypadInput : MonoBehaviour
         if(pressed && nextInput > 0)
         {
             transform.position = new Vector3(originalPos, transform.position.y, transform.position.z);
-            nextInput = 1f;
+            nextInput = .3f;
         }
     }
 
@@ -42,7 +42,7 @@ public class KeypadInput : MonoBehaviour
         nextInput -= Time.deltaTime;
         if(nextInput <= 0)
         {
-            pressed = true;
+            pressed = false;
             nextInput = Mathf.Infinity;
         }
     }
