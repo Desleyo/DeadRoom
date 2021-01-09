@@ -7,9 +7,12 @@ using Valve.VR.InteractionSystem;
 
 public class Code : MonoBehaviour
 {
-    public int charToAdd = -1, characters;
     public string code, clear;
-    public bool cleared;
+
+    int charToAdd = -1, characters;
+    bool cleared;
+    float clearTimer;
+
     Text text;
 
     public GameObject key;
@@ -22,7 +25,7 @@ public class Code : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!cleared)
+        if (!cleared && clearTimer == Mathf.Infinity)
         {
             if (charToAdd != -1)
             {
@@ -36,6 +39,15 @@ public class Code : MonoBehaviour
                 CheckCode();
             }
         }
+
+        clearTimer -= Time.deltaTime;
+        if (clearTimer <= 0)
+        {
+            clearTimer = Mathf.Infinity;
+            text.color = Color.white;
+            text.text = clear;
+            characters = 0;
+        }
     }
 
     private void CheckCode()
@@ -48,8 +60,8 @@ public class Code : MonoBehaviour
         }
         else
         {
-            text.text = clear;
-            characters = 0;
+            text.color = Color.red;
+            clearTimer = .5f;
         }
     }
 }
