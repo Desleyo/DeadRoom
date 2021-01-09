@@ -8723,10 +8723,60 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7824753648676844136, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -3542852092398272455, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -3274006528333456403, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -2093772787462966335, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -1255605710908113952, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -775069670341356040, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: fd8bf243c87aa6048bf350a778150201,
         type: 3}
       propertyPath: m_Name
       value: CodePad
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083501151425157549, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306643203051859313, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4418473098069316928, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865064391339405807, guid: fd8bf243c87aa6048bf350a778150201,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd8bf243c87aa6048bf350a778150201, type: 3}
@@ -8932,8 +8982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8946,8 +8996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8960,8 +9010,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8974,8 +9024,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8988,8 +9038,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9002,8 +9052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9016,8 +9066,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9030,8 +9080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9044,8 +9094,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!114 &622605319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9058,8 +9108,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 0.5
-  originalPosY: 0
+  pressDistance: 0.005
+  originalPosZ: 0
 --- !u!1 &623951856
 GameObject:
   m_ObjectHideFlags: 0
