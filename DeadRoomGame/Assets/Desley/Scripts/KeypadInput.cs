@@ -5,11 +5,11 @@ using UnityEngine;
 public class KeypadInput : MonoBehaviour
 {
     bool pressed;
-    public float pressDistance, originalPosZ;
+    public float pressDistance, originalPos;
 
     private void Start()
     {
-        originalPosZ = transform.position.z;
+        originalPos = transform.position.x;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -17,7 +17,7 @@ public class KeypadInput : MonoBehaviour
         if(!pressed)
         {
             pressed = true;
-            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - pressDistance);
+            transform.position = new Vector3(transform.position.x - pressDistance, transform.position.y, transform.position.z);
             //add char to keypad screen
         }
     }
@@ -25,7 +25,7 @@ public class KeypadInput : MonoBehaviour
     {
         if(pressed)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, originalPosZ);
+            transform.position = new Vector3(originalPos, transform.position.y, transform.position.z);
             pressed = false;
         }
     }
