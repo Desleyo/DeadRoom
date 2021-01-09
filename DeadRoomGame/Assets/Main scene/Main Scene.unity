@@ -8932,7 +8932,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605311
 MonoBehaviour:
@@ -8946,7 +8946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605312
 MonoBehaviour:
@@ -8960,7 +8960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605313
 MonoBehaviour:
@@ -8974,7 +8974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605314
 MonoBehaviour:
@@ -8988,7 +8988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605315
 MonoBehaviour:
@@ -9002,7 +9002,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605316
 MonoBehaviour:
@@ -9016,7 +9016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605317
 MonoBehaviour:
@@ -9030,7 +9030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605318
 MonoBehaviour:
@@ -9044,7 +9044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!114 &622605319
 MonoBehaviour:
@@ -9058,7 +9058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f411dd27109edfe4c85c662f42268c3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressDistance: 5
+  pressDistance: 0.5
   originalPosY: 0
 --- !u!1 &623951856
 GameObject:
