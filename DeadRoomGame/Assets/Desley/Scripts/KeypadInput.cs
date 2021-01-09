@@ -14,7 +14,7 @@ public class KeypadInput : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Hand" && !pressed)
+        if(!pressed)
         {
             pressed = true;
             transform.position = new Vector3(transform.position.x, transform.position.y - pressDistance, transform.position.z);
@@ -23,7 +23,7 @@ public class KeypadInput : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Hand")
+        if(pressed)
         {
             transform.position = new Vector3(transform.position.x, originalPosY, transform.position.z);
             pressed = false;
