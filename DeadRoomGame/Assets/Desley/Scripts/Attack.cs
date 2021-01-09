@@ -7,15 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class Attack : MonoBehaviour
 {
-    public GameObject wendigoD, eventPlayer;
+    public GameObject wendigoD, eventPlayer, bedroomDoor;
     public Transform playerPos, walkPoint, spawnPoint;
     NavMeshAgent agent;
     public AudioSource preAttack, attack;
     public AudioClip[] attackSounds;
     public int randomizer, room, pathfindWarning;
-    public bool attacked, canWalk, stairs, setTimer, attackStarted, playerFound;
-    public float distance, lastDistance = Mathf.Infinity, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
-
+    public bool attacked, canWalk, stairs, setTimer, attackStarted, playerFound, spawned;
+    public float distance, lastDistance = Mathf.Infinity, walkDistance, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
+    Quaternion neededRotation;
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -97,12 +97,28 @@ public class Attack : MonoBehaviour
     {
         if(room == 2)
         {
-            transform.position = Vector3.MoveTowards(transform.position, walkPoint.position, speed * Time.deltaTime);
-            float pointDistance = Vector3.Distance(transform.position, walkPoint.position);
-            if (pointDistance <= .1f)
+            if (!spawned)
+            {
+                bedroomDoor.transform.rotation = Quaternion.Euler(0, -90, 0);
+                transform.position = Vector3.MoveTowards(transform.position, spawnPoint.position, speed * Time.deltaTime);
+                walkDistance = Vector3.Distance(transform.position, spawnPoint.position);
+                transform.rotation = Quaternion.Euler(transform.rotation.x, 90, transform.rotation.z);
+            }
+            else
+            {
+                transform.position = Vector3.MoveTowards(transform.position, walkPoint.position, speed * Time.deltaTime);
+                walkDistance = Vector3.Distance(transform.position, walkPoint.position);
+                neededRotation = Quaternion.LookRotation(walkPoint.position - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, neededRotation, .05f);
+            }
+
+            if (walkDistance <= .1f && !spawned)
+            {
+                spawned = true;
+            }
+            else if(walkDistance <= .1f && spawned)
             {
                 agent.enabled = true;
-                walkPoint.gameObject.SetActive(false);
                 canWalk = true;
             }
         }
