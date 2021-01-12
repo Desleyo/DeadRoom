@@ -58,6 +58,10 @@
       "type": "boolean"
     },
     {
+      "name": "/actions/default/in/Options",
+      "type": "boolean"
+    },
+    {
       "name": "/actions/default/out/Haptic",
       "type": "vibration"
     },
@@ -179,7 +183,8 @@
       "/actions/default/in/SnapTurnRight": "Snap Turn (Right)",
       "/actions/default/in/TouchPad": "TouchPad",
       "/actions/default/in/GrabGripRight": "GrabGripRight",
-      "/actions/default/in/GrabGripLeft": "GrabGripLeft"
+      "/actions/default/in/GrabGripLeft": "GrabGripLeft",
+      "/actions/default/in/Options": "Options"
     }
   ]
 }
