@@ -21,7 +21,7 @@ public class KeypadInput : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!pressed)
+        if(!pressed && canvas.GetComponent<Code>().clearTimer == Mathf.Infinity)
         {
             transform.position = new Vector3(transform.position.x - pressDistance, transform.position.y, transform.position.z);
             canvas.GetComponent<Code>().charToAdd = number;

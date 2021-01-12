@@ -34,6 +34,7 @@ public class Interaction : MonoBehaviour
             else if (distance <= .3 && Grab && !painting)
             {
                 audioSource.Play();
+                GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().gunFired = true;
                 gunWithFlag.SetActive(true);
                 gameObject.SetActive(false);
             }

@@ -12,7 +12,7 @@ public class Code : MonoBehaviour
 
     int characters;
     bool cleared;
-    float clearTimer;
+    public float clearTimer;
 
     Text text;
 

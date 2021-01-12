@@ -5,8 +5,14 @@ using UnityEngine;
 public class Crowbar : MonoBehaviour
 {
     public GameObject crowbar, point;
+    Transform originalPos;
     public float distance;
     public bool useable = true;
+
+    void Start()
+    {
+        originalPos = transform;
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,6 +23,11 @@ public class Crowbar : MonoBehaviour
             //play sound
             crowbar.SetActive(true);
             Destroy(gameObject);
+        }
+
+        if(transform != originalPos)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().crowbarFound = true;
         }
     }
 }

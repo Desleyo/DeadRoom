@@ -43,6 +43,7 @@ public class FireExtinguisher : MonoBehaviour
                     fire.SetActive(false);
                     audioPlayer.Play();
                     done = true;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().fireExtinguished = true;
                 }
             }
         }

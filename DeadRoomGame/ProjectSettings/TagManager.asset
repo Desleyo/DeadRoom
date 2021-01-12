@@ -14,6 +14,14 @@ TagManager:
   - Button
   - Slider
   - timer
+  - eventPlayer
+  - gun
+  - letterCode
+  - door
+  - kabinet
+  - letterFriends
+  - letterPrologue
+  - letterEntry3
   layers:
   - Default
   - TransparentFX
