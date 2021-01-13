@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class HintTracker : MonoBehaviour
 {
-    GameObject eventPlayer;
+    public GameObject eventPlayer;
     public List <Transform> transforms;
     public bool crowbarFound, letterCodeFound, fireExtinguished, gunFired;
     public float distance, crowbarTimer = Mathf.Infinity, fireTimer = Mathf.Infinity, gunTimer = Mathf.Infinity, escapeTimer = Mathf.Infinity, letterTimer = Mathf.Infinity;
     int letter;
     bool gunTimerUp;
-
-    void Start()
-    {
-        eventPlayer = GameObject.FindGameObjectWithTag("eventPlayer");
-    }
 
     private void Update()
     {
@@ -25,7 +20,7 @@ public class HintTracker : MonoBehaviour
             foreach (Transform objects in transforms)
             {
                 distance = Vector3.Distance(transform.position, objects.position);
-                if(distance <= 1 && objects.tag == "door")
+                if(distance <= 2 && objects.tag == "door")
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(0);
                     transforms.Remove(objects);
@@ -38,12 +33,12 @@ public class HintTracker : MonoBehaviour
                     letter = 1;
                     letterTimer = 5;
                 }
-                /*else if (distance <= 1 && objects.tag == "kabinet" && letterCodeFound)
+                /*else if (distance <= 1.5 && objects.tag == "kabinet" && letterCodeFound)
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(4);
                     transforms.Remove(objects);
                 }
-                */else if (distance <= 1 && objects.tag == "gun" && gunTimerUp)
+                */else if (distance <= 1.5 && objects.tag == "gun" && gunTimerUp)
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(5);
                     transforms.Remove(objects);

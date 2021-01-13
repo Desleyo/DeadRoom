@@ -23758,6 +23758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81d0737eda6888547abad8d0f013a5c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventPlayer: {fileID: 465062965}
   transforms:
   - {fileID: 626300966}
   - {fileID: 1350098965}
@@ -23769,6 +23770,7 @@ MonoBehaviour:
   letterCodeFound: 0
   fireExtinguished: 0
   gunFired: 0
+  distance: 0
   crowbarTimer: Infinity
   fireTimer: Infinity
   gunTimer: Infinity
