@@ -13132,8 +13132,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.86429113, b: 0.514151, a: 1}
-  m_Intensity: 0.2
-  m_Range: 0.6071998
+  m_Intensity: 0.3
+  m_Range: 2.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -25487,7 +25487,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 281aee83e8cb01345b4b4d502700aefe,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 281aee83e8cb01345b4b4d502700aefe, type: 3}
@@ -34537,12 +34537,12 @@ PrefabInstance:
     - target: {fileID: 11401046, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: renderModelPrefab
       value: 
-      objectReference: {fileID: 1000012617731570, guid: d07386f0ec952ec409dc7753bcf5746b,
+      objectReference: {fileID: 1000012617731570, guid: 820f83596a57da048b665ab08a6f7210,
         type: 3}
     - target: {fileID: 11450312, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: renderModelPrefab
       value: 
-      objectReference: {fileID: 1000011547835092, guid: 8ade79fed86bbd141926d1cd94c98457,
+      objectReference: {fileID: 1000011547835092, guid: a325160a4ba4d6840a1e6013e814b40d,
         type: 3}
     - target: {fileID: 11450312, guid: dc06161b6d97feb419f45f03b62e14b9, type: 3}
       propertyPath: showDebugText
