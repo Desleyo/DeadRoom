@@ -7203,7 +7203,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.958
+      value: -6.953
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
@@ -7213,27 +7213,27 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.1577
+      value: 9.1624
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7117774
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.7024052
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
@@ -7248,7 +7248,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 269.241
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fafe0fdf37fb01040a2043c62b58091f,
         type: 3}
@@ -9319,7 +9319,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
