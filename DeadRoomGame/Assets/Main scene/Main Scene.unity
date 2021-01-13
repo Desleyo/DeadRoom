@@ -23760,7 +23760,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transforms:
   - {fileID: 626300966}
-  - {fileID: 0}
   - {fileID: 1350098965}
   - {fileID: 749371560}
   - {fileID: 1903948833}
