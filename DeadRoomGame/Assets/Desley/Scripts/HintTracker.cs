@@ -34,12 +34,12 @@ public class HintTracker : MonoBehaviour
                     letter = 1;
                     letterTimer = 5;
                 }
-                else if (distance <= 1.5 && objects.tag == "kabinet" && letterCodeFound)
+                else if (distance <= 2 && objects.tag == "kabinet" && letterCodeFound)
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(4);
                     transforms.Remove(objects);
                 }
-                else if (distance <= 1.5 && objects.tag == "gun" && gunTimerUp)
+                else if (distance <= 2 && objects.tag == "gun" && gunTimerUp)
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(5);
                     transforms.Remove(objects);

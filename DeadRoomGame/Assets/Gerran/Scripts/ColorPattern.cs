@@ -21,6 +21,8 @@ public class ColorPattern : MonoBehaviour
     public AudioSource source;
     public AudioClip clip;
 
+    public bool cleared;
+
     // Update is called once per frame
     void Update()
     {
@@ -106,7 +108,7 @@ public class ColorPattern : MonoBehaviour
                     colorMat[4].EnableKeyword("_EMISSION");
                 }
 
-                else if (time <= 0.00001)
+                else if (time <= 0.00001 && !cleared)
                 {
                     colorMat[0].DisableKeyword("_EMISSION");
                     colorMat[1].DisableKeyword("_EMISSION");
@@ -117,7 +119,7 @@ public class ColorPattern : MonoBehaviour
                     GetComponent<Chest>().chestOpen = true;
                     chest.GetComponent<CircularDrive>().minAngle = -50;
                     audioSource.Play();
-                    time = Mathf.Infinity;
+                    cleared = true;
                 }
 
             }
