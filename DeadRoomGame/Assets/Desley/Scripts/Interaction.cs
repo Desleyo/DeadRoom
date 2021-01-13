@@ -29,6 +29,7 @@ public class Interaction : MonoBehaviour
                 GetComponent<Rigidbody>().isKinematic = false;
                 GetComponent<Rigidbody>().useGravity = true;
                 GetComponent<Outline>().enabled = false;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().paintingDropped = true;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().fireTimer = 60;
                 audioSource.Play();
                 done = true;
@@ -37,6 +38,7 @@ public class Interaction : MonoBehaviour
             {
                 audioSource.Play();
                 GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().gunFired = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().escapeTimer = 10;
                 gunWithFlag.SetActive(true);
                 gameObject.SetActive(false);
                 done = true;

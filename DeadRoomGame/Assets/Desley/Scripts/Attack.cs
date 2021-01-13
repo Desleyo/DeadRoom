@@ -16,6 +16,7 @@ public class Attack : MonoBehaviour
     public bool attacked, canWalk, stairs, setTimer, attackStarted, playerFound, spawned;
     public float distance, lastDistance = Mathf.Infinity, walkDistance, attackSoundTimer = Mathf.Infinity, walkTimer = Mathf.Infinity, speed = .75f;
     Quaternion neededRotation;
+
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();

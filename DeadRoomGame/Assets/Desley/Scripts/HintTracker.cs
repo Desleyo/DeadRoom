@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class HintTracker : MonoBehaviour
 {
-    public GameObject eventPlayer;
+    public GameObject eventPlayer, cam;
     public List <Transform> transforms;
-    public bool crowbarFound, letterCodeFound, fireExtinguished, gunFired;
-    public float distance, crowbarTimer = Mathf.Infinity, fireTimer = Mathf.Infinity, gunTimer = Mathf.Infinity, escapeTimer = Mathf.Infinity, letterTimer = Mathf.Infinity;
+    public bool crowbarFound, letterCodeFound, fireExtinguished, gunFired, paintingDropped, kabinetOpened;
+    public float crowbarTimer = Mathf.Infinity, fireTimer = Mathf.Infinity, gunTimer = Mathf.Infinity, escapeTimer = Mathf.Infinity, letterTimer = Mathf.Infinity;
     int letter;
     bool gunTimerUp;
 
@@ -19,43 +19,44 @@ public class HintTracker : MonoBehaviour
         {
             foreach (Transform objects in transforms)
             {
-                distance = Vector3.Distance(transform.position, objects.position);
+                float distance = Vector3.Distance(transform.position, objects.position);
+                float camDistance = Vector3.Distance(cam.transform.position, objects.position);
                 if(distance <= 2 && objects.tag == "door")
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(0);
                     transforms.Remove(objects);
                     crowbarTimer = 60;
                 }
-                else if (distance <= 1 && objects.tag == "letterCode" && !letterCodeFound)
+                else if (camDistance <= 1 && objects.tag == "letterCode" && !letterCodeFound)
                 {
                     transforms.Remove(objects);
                     letterCodeFound = true;
                     letter = 1;
                     letterTimer = 5;
                 }
-                /*else if (distance <= 1.5 && objects.tag == "kabinet" && letterCodeFound)
+                else if (distance <= 1.5 && objects.tag == "kabinet" && letterCodeFound)
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(4);
                     transforms.Remove(objects);
                 }
-                */else if (distance <= 1.5 && objects.tag == "gun" && gunTimerUp)
+                else if (distance <= 1.5 && objects.tag == "gun" && gunTimerUp)
                 {
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(5);
                     transforms.Remove(objects);
                 }
-                else if (distance <= 1 && objects.tag == "letterFriends")
+                else if (camDistance <= 1 && objects.tag == "letterFriends")
                 {
                     transforms.Remove(objects);
                     letter = 2;
                     letterTimer = 10;
                 }
-                else if (distance <= 1 && objects.tag == "letterPrologue")
+                else if (camDistance <= 1 && objects.tag == "letterPrologue")
                 {
                     transforms.Remove(objects);
                     letter = 3;
                     letterTimer = 5;
                 }
-                else if (distance <= 1 && objects.tag == "letterEntry3")
+                else if (camDistance <= 1 && objects.tag == "letterEntry3")
                 {
                     transforms.Remove(objects);
                     letter = 4;
@@ -89,9 +90,13 @@ public class HintTracker : MonoBehaviour
         }
 
         escapeTimer -= Time.deltaTime;
-        if (escapeTimer <= 0 && gunFired)
+        if (escapeTimer <= 0 && gunFired && fireExtinguished && kabinetOpened && paintingDropped)
         {
             eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(6);
+            escapeTimer = Mathf.Infinity;
+        }
+        else if(escapeTimer <= 0)
+        {
             escapeTimer = Mathf.Infinity;
         }
 

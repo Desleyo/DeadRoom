@@ -95,18 +95,18 @@ public class RandomEvents : MonoBehaviour
         if(eventNumber >= 8 && eventNumber <=9)
         {
             scratchPos.GetComponent<StairScratch>().Randomize();
-            GameObject.FindGameObjectWithTag("eventPlayer").GetComponent<VoicelinePlayer>().OnWendigoAppear();
+            GetComponent<VoicelinePlayer>().OnWendigoAppear();
         }
         else if(eventNumber >= 10 && eventNumber <= 11)
         {
             staringPos.GetComponent<StairScratch>().Randomize();
-            GameObject.FindGameObjectWithTag("eventPlayer").GetComponent<VoicelinePlayer>().OnWendigoAppear();
+            GetComponent<VoicelinePlayer>().OnWendigoAppear();
         }
         else if(eventNumber >= 12 && eventNumber <= 13)
         {
             wendigoPos.SetActive(true);
             wendigoPos.GetComponent<WalkBy>().reset = false;
-            GameObject.FindGameObjectWithTag("eventPlayer").GetComponent<VoicelinePlayer>().OnWendigoAppear();
+            GetComponent<VoicelinePlayer>().OnWendigoAppear();
         }
     }
 }

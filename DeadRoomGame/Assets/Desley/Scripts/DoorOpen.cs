@@ -41,6 +41,14 @@ public class DoorOpen : MonoBehaviour
         doorBroken = true;
     }
 
+    public void KabinetKey()
+    {
+        GetComponent<CircularDrive>().minAngle = angle;
+        key.GetComponent<Collider>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().kabinetOpened = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().gunTimer = 60;
+    }
+
     public void Update()
     {
         timer -= Time.deltaTime;      
