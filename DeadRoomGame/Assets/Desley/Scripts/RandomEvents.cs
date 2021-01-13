@@ -11,30 +11,36 @@ public class RandomEvents : MonoBehaviour
     public float gameTimer, nextEventTimer, timerMin, timerMax;
     public bool devMode, playable = true;
 
-    private void Start()
-    {
-        if(canvas.GetComponent<Timer>().min <= 10)
-        {
-            devMode = true;
-        }
-        else
-        {
-            devMode = false;
-        }
-
-        if (!devMode)
-        {
-            nextEventTimer = 120f;
-        }
-        else
-        {
-            nextEventTimer = 60f;
-        }
-    }
-
     // Update is called once per frame
     void Update()
     {
+        if (canvas == null)
+        {
+            canvas = GameObject.FindGameObjectWithTag("timer");
+        }
+        if (canvas != null)
+        {
+            if (canvas.GetComponent<Timer>().min <= 10)
+            {
+                devMode = true;
+            }
+            else
+            {
+                devMode = false;
+            }
+
+            if (!devMode)
+            {
+                nextEventTimer = 120f;
+            }
+            else
+            {
+                nextEventTimer = 60f;
+            }
+        }
+        else
+            return;
+
         nextEventTimer -= Time.deltaTime;
         gameTimer = canvas.GetComponent<Timer>().min;
 
