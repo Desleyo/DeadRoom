@@ -9,7 +9,7 @@ public class Interaction : MonoBehaviour
     public AudioSource audioSource;
     public SteamVR_Action_Boolean Trigger;
     public GameObject[] hands;
-    public bool Grab, painting;
+    public bool Grab, painting, done;
     public float distance = Mathf.Infinity;
 
     [Header("not required when interacting with painting")]
@@ -24,19 +24,22 @@ public class Interaction : MonoBehaviour
         foreach (GameObject hand in hands)
         {
             distance = Vector3.Distance(transform.position, hand.transform.position);
-            if(distance <= .3 && Grab && painting)
+            if(distance <= .3 && Grab && painting && !done)
             {
                 GetComponent<Rigidbody>().isKinematic = false;
                 GetComponent<Rigidbody>().useGravity = true;
                 GetComponent<Outline>().enabled = false;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().fireTimer = 60;
                 audioSource.Play();
+                done = true;
             }
-            else if (distance <= .3 && Grab && !painting)
+            else if (distance <= .3 && Grab && !painting && !done)
             {
                 audioSource.Play();
                 GameObject.FindGameObjectWithTag("Player").GetComponent<HintTracker>().gunFired = true;
                 gunWithFlag.SetActive(true);
                 gameObject.SetActive(false);
+                done = true;
             }
         }
     }
