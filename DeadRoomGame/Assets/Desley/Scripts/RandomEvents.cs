@@ -20,6 +20,8 @@ public class RandomEvents : MonoBehaviour
         }
         if (canvas != null)
         {
+            canvas.GetComponent<Timer>().eventPlayer = gameObject;
+
             if (canvas.GetComponent<Timer>().min <= 10)
             {
                 devMode = true;
