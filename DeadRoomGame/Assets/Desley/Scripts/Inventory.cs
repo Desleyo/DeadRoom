@@ -60,7 +60,7 @@ public class Inventory : MonoBehaviour
             itemRigidbody = item.GetComponent<Rigidbody>();
             item.GetComponent<Collider>().enabled = false;
             GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<SphereCollider>().enabled = false;
+            GetComponent<Collider>().enabled = false;
             if (item.tag == "useable")
             {
                 if (item.GetComponent<Crowbar>())

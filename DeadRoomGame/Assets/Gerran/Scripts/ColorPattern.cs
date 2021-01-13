@@ -117,6 +117,7 @@ public class ColorPattern : MonoBehaviour
                     GetComponent<Chest>().chestOpen = true;
                     chest.GetComponent<CircularDrive>().minAngle = -50;
                     audioSource.Play();
+                    time = Mathf.Infinity;
                 }
 
             }
