@@ -13,12 +13,18 @@ public class DeerTotem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         timer = GameObject.FindWithTag("timer");
+         
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if(timer == null)
+        {
+            timer = GameObject.FindWithTag("timer");
+        }
+
         if(deerTotemDone == true)
         {
             if (mensTotem.GetComponent<MensTotem>().mensTotemDone == true)
