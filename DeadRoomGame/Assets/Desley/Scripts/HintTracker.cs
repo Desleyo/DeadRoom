@@ -26,7 +26,7 @@ public class HintTracker : MonoBehaviour
                     transforms.Remove(objects);
                     crowbarTimer = 60;
                 }
-                else if (distance <= .5 && objects.tag == "letterCode" && !letterCodeFound)
+                else if (distance <= 1 && objects.tag == "letterCode" && !letterCodeFound)
                 {
                     transforms.Remove(objects);
                     letterCodeFound = true;
@@ -43,19 +43,19 @@ public class HintTracker : MonoBehaviour
                     eventPlayer.GetComponent<VoicelinePlayer>().PlayVoiceline(5);
                     transforms.Remove(objects);
                 }
-                else if (distance <= .5 && objects.tag == "letterFriends")
+                else if (distance <= 1 && objects.tag == "letterFriends")
                 {
                     transforms.Remove(objects);
                     letter = 2;
                     letterTimer = 10;
                 }
-                else if (distance <= .5 && objects.tag == "letterPrologue")
+                else if (distance <= 1 && objects.tag == "letterPrologue")
                 {
                     transforms.Remove(objects);
                     letter = 3;
                     letterTimer = 5;
                 }
-                else if (distance <= .5 && objects.tag == "letterEntry3")
+                else if (distance <= 1 && objects.tag == "letterEntry3")
                 {
                     transforms.Remove(objects);
                     letter = 4;
