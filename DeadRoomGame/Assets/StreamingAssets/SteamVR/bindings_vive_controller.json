@@ -148,18 +148,6 @@
             },
             {
                "inputs" : {
-                  "position" : {
-                     "output" : "/actions/default/in/touchpad"
-                  },
-                  "touch" : {
-                     "output" : "/actions/default/in/options"
-                  }
-               },
-               "mode" : "trackpad",
-               "path" : "/user/hand/left/input/trackpad"
-            },
-            {
-               "inputs" : {
                   "click" : {
                      "output" : "/actions/default/in/grabgripright"
                   }
@@ -211,6 +199,18 @@
                },
                "mode" : "trigger",
                "path" : "/user/hand/right/input/trigger"
+            },
+            {
+               "inputs" : {
+                  "click" : {
+                     "output" : "/actions/default/in/options"
+                  },
+                  "position" : {
+                     "output" : "/actions/default/in/touchpad"
+                  }
+               },
+               "mode" : "trackpad",
+               "path" : "/user/hand/left/input/trackpad"
             }
          ]
       },
