@@ -6108,7 +6108,7 @@ MonoBehaviour:
   mainDoor: {fileID: 416200448}
   wendigoB: {fileID: 1917538633}
   wendigoM: {fileID: 511723637}
-  heartBeat: {fileID: 203227990}
+  heartBeat: {fileID: 275949442}
 --- !u!114 &465062968
 MonoBehaviour:
   m_ObjectHideFlags: 0
