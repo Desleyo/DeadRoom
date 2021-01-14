@@ -9,7 +9,7 @@ public class RandomEvents : MonoBehaviour
     public GameObject scratchPos, staringPos, wendigoPos;
     public int randomEvent, randomMin, randomMax;
     public float gameTimer, nextEventTimer, timerMin, timerMax;
-    public bool devMode, playable = true;
+    public bool devMode, playable = true, canvasSet;
 
     // Update is called once per frame
     void Update()
@@ -18,7 +18,7 @@ public class RandomEvents : MonoBehaviour
         {
             canvas = GameObject.FindGameObjectWithTag("timer");
         }
-        if (canvas != null)
+        if (canvas != null && !canvasSet)
         {
             canvas.GetComponent<Timer>().eventPlayer = gameObject;
 
@@ -39,6 +39,8 @@ public class RandomEvents : MonoBehaviour
             {
                 nextEventTimer = 60f;
             }
+
+            canvasSet = true;
         }
         else
             return;
