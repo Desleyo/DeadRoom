@@ -970,6 +970,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 76097514}
   m_Mesh: {fileID: -8281888179738802165, guid: 128ddc1e792ad3a4ab48768a1279841e, type: 3}
+--- !u!4 &89510010 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3096116934639898473, guid: c28c51e59948c484baaa24c2020f7cf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 135596543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &96327509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2024,7 +2030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Root: {fileID: 1950027005917552819, guid: 802a9e689e734064dbf56f9804a56f9b, type: 3}
+  m_Root: {fileID: 89510010}
   m_UpdateRate: 60
   m_UpdateMode: 3
   m_Damping: 0.5
@@ -4960,7 +4966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Root: {fileID: 1950027005917552819, guid: 802a9e689e734064dbf56f9804a56f9b, type: 3}
+  m_Root: {fileID: 1689110797}
   m_UpdateRate: 60
   m_UpdateMode: 3
   m_Damping: 0.5
@@ -5134,6 +5140,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6825795, y: 0.37118635, z: 0.35901368}
   m_Center: {x: 0, y: 0.1944739, z: 0}
+--- !u!4 &400162363 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3096116934639898473, guid: c28c51e59948c484baaa24c2020f7cf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1977973365}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &401812333
 GameObject:
   m_ObjectHideFlags: 0
@@ -11056,6 +11068,12 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 2
   m_ShadowAngle: 0
+--- !u!4 &846890891 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3096116934639898473, guid: c28c51e59948c484baaa24c2020f7cf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 869728902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &848968244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11754,7 +11772,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Root: {fileID: 1950027005917552819, guid: 802a9e689e734064dbf56f9804a56f9b, type: 3}
+  m_Root: {fileID: 846890891}
   m_UpdateRate: 60
   m_UpdateMode: 3
   m_Damping: 0.5
@@ -22683,6 +22701,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686878111}
   m_Mesh: {fileID: -4773355822595451164, guid: 1e65be660c51eca489b70108a13d9e5e, type: 3}
+--- !u!4 &1689110797 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3096116934639898473, guid: c28c51e59948c484baaa24c2020f7cf6,
+    type: 3}
+  m_PrefabInstance: {fileID: 351408860}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1723251378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: 5bd25ec908775c246856afe4e1c3e52d,
@@ -27634,7 +27658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ac8d30c6a0d9642a11e5be4c440740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Root: {fileID: 1950027005917552819, guid: 802a9e689e734064dbf56f9804a56f9b, type: 3}
+  m_Root: {fileID: 400162363}
   m_UpdateRate: 60
   m_UpdateMode: 3
   m_Damping: 0.5
