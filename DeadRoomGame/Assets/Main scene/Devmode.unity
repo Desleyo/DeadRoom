@@ -10477,11 +10477,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 885792217}
   children:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1359289601}
+  - {fileID: 174832410}
+  - {fileID: 2069522289}
+  - {fileID: 1880268545}
+  - {fileID: 1212354648}
   activeChild: {fileID: 0}
   hasAnimationToPlay: 0
   randomizer: 0
