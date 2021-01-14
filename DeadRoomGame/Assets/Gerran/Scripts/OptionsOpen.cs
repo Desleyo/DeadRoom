@@ -27,7 +27,7 @@ public class OptionsOpen : MonoBehaviour
         {
             options.SetActive(true);
             background.SetActive(true);
-            rightHand.GetComponent<SteamVR_LaserPointer>().thickness = 0.002f;
+            rightHand.GetComponent<SteamVR_LaserPointer>().active = true;
             opened = true;
             timer = .3f;
         }
@@ -35,14 +35,14 @@ public class OptionsOpen : MonoBehaviour
         {
             options.SetActive(false);
             background.SetActive(false);
-            rightHand.GetComponent<SteamVR_LaserPointer>().thickness = 0;
+            rightHand.GetComponent<SteamVR_LaserPointer>().active = false;
             opened = false;
             timer = .3f;
         }
 
         if(background.activeSelf == false)
         {
-            rightHand.GetComponent<SteamVR_LaserPointer>().thickness = 0;
+            rightHand.GetComponent<SteamVR_LaserPointer>().active = false;
             opened = false;
         }
 
