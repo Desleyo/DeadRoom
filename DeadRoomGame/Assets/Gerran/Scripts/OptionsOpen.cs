@@ -12,6 +12,11 @@ public class OptionsOpen : MonoBehaviour
     public bool currentInput, opened;
     public GameObject options, background, rightHand;
 
+    void Start()
+    {
+        rightHand = GetComponentInParent<Hand>().otherHand.gameObject;
+    }
+
     // Update is called once per frame
     void Update()
     {
