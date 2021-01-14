@@ -144,9 +144,10 @@ public class Attack : MonoBehaviour
 
     void FindPlayer()
     {
+        neededRotation = Quaternion.LookRotation(playerPos.position - transform.position);
+        transform.rotation = Quaternion.Slerp(transform.rotation, neededRotation, .05f);
         transform.position = Vector3.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
         float pointDistance = Vector3.Distance(transform.position, playerPos.position);
-        Debug.Log(pointDistance);
         if(pointDistance <= agent.stoppingDistance)
         {
             startAttack();
