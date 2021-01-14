@@ -4,18 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneManeger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Quit()
     {
         Application.Quit();
@@ -25,6 +13,11 @@ public class SceneManeger : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene("Main Scene");
+    }
+
+    public void LoadDevScene()
+    {
+        SceneManager.LoadScene("Devmode");
     }
 
     public void MenuScene()
