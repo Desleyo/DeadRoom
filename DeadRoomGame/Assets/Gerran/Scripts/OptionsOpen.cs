@@ -11,6 +11,7 @@ public class OptionsOpen : MonoBehaviour
     public SteamVR_Action_Boolean input;
     public bool currentInput, opened;
     public GameObject options, background, rightHand;
+    float timer;
 
     void Start()
     {
@@ -22,19 +23,23 @@ public class OptionsOpen : MonoBehaviour
     {
         currentInput = input.state;
 
-        if(currentInput && !opened)
+        if(currentInput && !opened && timer <= 0)
         {
             options.SetActive(true);
             background.SetActive(true);
             rightHand.GetComponent<SteamVR_LaserPointer>().enabled = true;
             opened = true;
+            timer = .3f;
         }
-        else if(currentInput && opened)
+        else if(currentInput && opened && timer <= 0)
         {
             options.SetActive(false);
             background.SetActive(false);
             rightHand.GetComponent<SteamVR_LaserPointer>().enabled = false;
             opened = false;
+            timer = .3f;
         }
+
+        timer -= Time.deltaTime;
     }
 }
