@@ -29,6 +29,6 @@ public class SceneManeger : MonoBehaviour
 
     public void MenuScene()
     {
-        SceneManager.LoadScene("Main Menu");
+        GameObject.FindGameObjectWithTag("eventPlayer").GetComponent<End>().ChangeScene();
     }
 }
