@@ -7,6 +7,7 @@ using Valve.VR.InteractionSystem;
 public class DeathEvent : MonoBehaviour
 {
     public GameObject player, teleporting, mainDoor, wendigoB, wendigoM;
+    public AudioSource heartBeat;
 
     public void onTimeUp()
     {
@@ -19,6 +20,8 @@ public class DeathEvent : MonoBehaviour
             wendigoB.GetComponent<Attack>().canWalk = false;
             wendigoB.GetComponent<Attack>().stairs = true;
             wendigoB.GetComponent<Attack>().walkTimer = 11f;
+            heartBeat.loop = true;
+            heartBeat.Play();
         }
         else if(player.GetComponent<PlayerController>().room == 1)
         {
@@ -27,6 +30,8 @@ public class DeathEvent : MonoBehaviour
             wendigoM.SetActive(true);
             wendigoM.GetComponent<Animator>().SetBool("walk", true);
             wendigoM.GetComponent<Attack>().room = 1;
+            heartBeat.loop = true;
+            heartBeat.Play();
         }
         else if (player.GetComponent<PlayerController>().room == 2)
         {
@@ -36,6 +41,8 @@ public class DeathEvent : MonoBehaviour
             wendigoM.SetActive(true);
             wendigoM.GetComponent<Animator>().SetBool("walk", true);
             wendigoM.GetComponent<Attack>().room = 2;
+            heartBeat.loop = true;
+            heartBeat.Play();
         }
 
         player.GetComponent<PlayerController>().speed = 0;
