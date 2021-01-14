@@ -42,7 +42,7 @@ public class RandomEvents : MonoBehaviour
 
             canvasSet = true;
         }
-        else
+        else if (!canvasSet)
             return;
 
         nextEventTimer -= Time.deltaTime;
