@@ -4,19 +4,28 @@ using UnityEngine;
 
 public class OnMouseOver : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.tag == "Hand")
-        {
-            GetComponent<Outline>().OutlineWidth = 10;
-        }
-    }
+    public GameObject[] hands;
 
-    private void OnTriggerExit(Collider other)
+    private void Update()
     {
-        if (other.transform.tag == "Hand")
+        if (hands[] == null)
         {
-            GetComponent<Outline>().OutlineWidth = 0;
+            hands = GameObject.FindGameObjectsWithTag("Hand");
+        }
+        if (hands[] == null)
+            return;
+
+        foreach(GameObject hand in hands)
+        {
+            float distance = Vector3.Distance(transform.position, hand.transform.position);
+            if(distance <= .5f)
+            {
+                GetComponent<Outline>().OutlineWidth = 10;
+            }
+            else
+            {
+                GetComponent<Outline>().OutlineWidth = 0;
+            }
         }
     }
 }
