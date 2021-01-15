@@ -15,7 +15,7 @@ public class OnMouseOver : MonoBehaviour
         if (hands == null)
             return;
 
-        foreach(GameObject hand in hands)
+        /*foreach(GameObject hand in hands)
         {
             float distance = Vector3.Distance(transform.position, hand.transform.position);
             if(distance <= .2)
@@ -26,6 +26,26 @@ public class OnMouseOver : MonoBehaviour
             {
                 GetComponent<Outline>().OutlineWidth = 0;
             }
+        }*/
+
+        float distanceRight = Vector3.Distance(transform.position, hands[0].transform.position);
+        if(distanceRight <= .2)
+        {
+            GetComponent<Outline>().OutlineWidth = 10;
+        }
+        else
+        {
+            GetComponent<Outline>().OutlineWidth = 0;
+        }
+
+        float distanceLeft = Vector3.Distance(transform.position, hands[1].transform.position);
+        if (distanceLeft <= .2)
+        {
+            GetComponent<Outline>().OutlineWidth = 10;
+        }
+        else
+        {
+            GetComponent<Outline>().OutlineWidth = 0;
         }
     }
 }
