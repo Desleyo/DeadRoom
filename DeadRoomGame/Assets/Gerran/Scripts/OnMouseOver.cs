@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnMouseOver : MonoBehaviour
 {
     public GameObject[] hands;
-    public bool leftOutline;
+    public bool leftOutline, rightOutline;
     private void Update()
     {
         if (hands == null)
@@ -19,10 +19,12 @@ public class OnMouseOver : MonoBehaviour
         if (distanceRight <= .2)
         {
             GetComponent<Outline>().OutlineWidth = 10;
+            rightOutline = true;
         }
         else if (!leftOutline)
         {
             GetComponent<Outline>().OutlineWidth = 0;
+            rightOutline = false;
         }
 
         float distanceLeft = Vector3.Distance(transform.position, hands[0].transform.position);
@@ -31,10 +33,17 @@ public class OnMouseOver : MonoBehaviour
             GetComponent<Outline>().OutlineWidth = 10;
             leftOutline = true;
         }
-        else
+        else if(!rightOutline)
         {
             GetComponent<Outline>().OutlineWidth = 0;
             leftOutline = false;
+        }
+
+        if(distanceRight > .2 && distanceLeft > .2)
+        {
+            GetComponent<Outline>().OutlineWidth = 0;
+            leftOutline = false;
+            rightOutline = false;
         }
     }
 }
