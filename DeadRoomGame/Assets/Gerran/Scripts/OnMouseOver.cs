@@ -15,7 +15,7 @@ public class OnMouseOver : MonoBehaviour
         if (hands == null)
             return;
 
-        float distanceRight = Vector3.Distance(transform.position, hands[0].transform.position);
+        float distanceRight = Vector3.Distance(transform.position, hands[1].transform.position);
         if (distanceRight <= .2)
         {
             GetComponent<Outline>().OutlineWidth = 10;
@@ -25,7 +25,7 @@ public class OnMouseOver : MonoBehaviour
             GetComponent<Outline>().OutlineWidth = 0;
         }
 
-        float distanceLeft = Vector3.Distance(transform.position, hands[1].transform.position);
+        float distanceLeft = Vector3.Distance(transform.position, hands[0].transform.position);
         if (distanceLeft <= .2)
         {
             GetComponent<Outline>().OutlineWidth = 10;
