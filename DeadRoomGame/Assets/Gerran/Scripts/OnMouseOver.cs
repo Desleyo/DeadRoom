@@ -18,7 +18,7 @@ public class OnMouseOver : MonoBehaviour
         foreach(GameObject hand in hands)
         {
             float distance = Vector3.Distance(transform.position, hand.transform.position);
-            if(distance <= .5f)
+            if(distance <= .2)
             {
                 GetComponent<Outline>().OutlineWidth = 10;
             }
