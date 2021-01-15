@@ -5,7 +5,7 @@ using UnityEngine;
 public class OnMouseOver : MonoBehaviour
 {
     public GameObject[] hands;
-    bool leftOutline;
+    public bool leftOutline;
     private void Update()
     {
         if (hands == null)
