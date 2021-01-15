@@ -8,11 +8,11 @@ public class OnMouseOver : MonoBehaviour
 
     private void Update()
     {
-        if (hands[] == null)
+        if (hands == null)
         {
             hands = GameObject.FindGameObjectsWithTag("Hand");
         }
-        if (hands[] == null)
+        if (hands == null)
             return;
 
         foreach(GameObject hand in hands)
