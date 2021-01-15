@@ -5357,8 +5357,8 @@ Transform:
   m_Father: {fileID: 1173486291}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &422367956
-BoxCollider:
+--- !u!136 &422367956
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5367,9 +5367,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.43862113, y: 0.20306435, z: 0.21300237}
-  m_Center: {x: -0.0019721421, y: 0.16762005, z: 0.19948874}
+  m_Radius: 0.059025876
+  m_Height: 0.47119135
+  m_Direction: 0
+  m_Center: {x: -0.005549831, y: 0.169353, z: 0.19132002}
 --- !u!114 &422367957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20560,8 +20561,8 @@ MonoBehaviour:
   highlightOnHover: 0
   hideHighlight: []
   hoverPriority: 0
---- !u!135 &1559362720
-SphereCollider:
+--- !u!136 &1559362720
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -20570,9 +20571,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.107873924
-  m_Center: {x: 0.003017679, y: -0.0017070773, z: -0.014049502}
+  m_Radius: 0.05574982
+  m_Height: 0.2059018
+  m_Direction: 2
+  m_Center: {x: 0.0000034082275, y: -0.006776804, z: 0.032967724}
 --- !u!4 &1559362723 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: aa2ce0efdcf75b444a098e45611df586,
@@ -24932,8 +24934,8 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!135 &1874784110
-SphereCollider:
+--- !u!136 &1874784110
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -24942,9 +24944,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.1054792
-  m_Center: {x: -0.0002328828, y: -0.01171875, z: 0.015140146}
+  m_Radius: 0.0370922
+  m_Height: 0.16701822
+  m_Direction: 2
+  m_Center: {x: -0.00085249543, y: -0.004671097, z: 0.05740349}
 --- !u!1001 &1883556846
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30172,8 +30175,8 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
---- !u!135 &2131369876
-SphereCollider:
+--- !u!136 &2131369876
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -30182,9 +30185,10 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.107873924
-  m_Center: {x: 0.003017679, y: -0.0017070773, z: -0.014049502}
+  m_Radius: 0.054090504
+  m_Height: 0.21934521
+  m_Direction: 2
+  m_Center: {x: 0.00000045448547, y: -0.0014591218, z: 0.036768038}
 --- !u!1 &2131507691
 GameObject:
   m_ObjectHideFlags: 0
