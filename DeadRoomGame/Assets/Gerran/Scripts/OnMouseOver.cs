@@ -37,6 +37,10 @@ public class OnMouseOver : MonoBehaviour
         {
             GetComponent<Outline>().OutlineWidth = 0;
         }
+        if(distanceRight <= .5)
+        {
+            Debug.Log(distanceRight);
+        }
 
         float distanceLeft = Vector3.Distance(transform.position, hands[1].transform.position);
         if (distanceLeft <= .2)
@@ -46,6 +50,10 @@ public class OnMouseOver : MonoBehaviour
         else
         {
             GetComponent<Outline>().OutlineWidth = 0;
+        }
+        if (distanceLeft <= .5)
+        {
+            Debug.Log(distanceLeft);
         }
     }
 }
