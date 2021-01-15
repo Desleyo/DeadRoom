@@ -54,7 +54,7 @@ public class Inventory : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (item == null && other.gameObject.layer == 9)
+        if (item == null && other.gameObject.GetComponent<AfterPickup>())
         {
             item = other.gameObject;
             itemRigidbody = item.GetComponent<Rigidbody>();
